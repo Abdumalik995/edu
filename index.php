@@ -4,6 +4,8 @@
 	ini_set('display_errors', 1);
 	error_reporting(E_ALL);
 	//2.faylga ulanish
-	define('ROOT', dirname(_FILE_));
-	require_once(ROOT.'components/Router.php');
+	define('ROOT', dirname(__FILE__));
+	//echo ROOT;
+	require_once(ROOT.'/components/Router.php');
+
  ?>
