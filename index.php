@@ -15,5 +15,10 @@
 	//print_r($_SERVER);
 	//echo $obyekt->getURL();
 	 $obyekt->run();
+	$a = $obyekt->routes;
 
+	/*$qator = "web dasturlash";
+	$shablon = "dastur";
+	$result = preg_match("~$shablon~", $qator);
+	var_dump($result);*/
  ?>
