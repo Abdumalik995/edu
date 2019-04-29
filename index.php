@@ -8,4 +8,12 @@
 	//echo ROOT;
 	require_once(ROOT.'/components/Router.php');
 
+	// class asosida faylni chaqirish
+	//require_once(ROOT.'/config/routes.php');
+	$obyekt = new Router;
+	//print_r($obyekt->routes);
+	//print_r($_SERVER);
+	//echo $obyekt->getURL();
+	 $obyekt->run();
+
  ?>
