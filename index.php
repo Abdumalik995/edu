@@ -14,7 +14,7 @@
 	//print_r($obyekt->routes);
 	//print_r($_SERVER);
 	//echo $obyekt->getURL();
-	 $obyekt->run();
+	$obyekt->run();
 	$a = $obyekt->routes;
 
 	/*$qator = "web dasturlash";
