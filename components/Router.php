@@ -27,7 +27,7 @@
 					$ControllerNomi = array_shift($segments).'Controller';
 					//echo "$ControllerNomi";
 					$ControllerNomi = ucfirst($ControllerNomi);
-
+					//echo $ControllerNomi;
 					//massivning ikkinchi elementidan action metod yasash
 					$actionName = 'action'.ucfirst(array_shift($segments));
 					//controller fayliga ulanish
