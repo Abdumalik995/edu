@@ -15,13 +15,17 @@
 		public function run() {
 			// urlni uzlashtirish
 			$uri = $this->getURL();
+
 			//routesga uzlashtirilgan massiv elementlarini uzgaruvchiga olish
 			foreach($this->routes as $urlShablon => $yul) {
 				//echo $yul,'<br>';
 				//urldagi adressni routes bilan solishtiradi
 				if (preg_match("~$urlShablon~", $uri)) {
-					//echo $yul,'<br>';
-					$segments = explode('/', $yul);
+
+
+					$tartibli_qiymat = preg_replace("~$urlShablon~", $yul, $uri);
+					//echo $tartibli_qiymat,'<br>';
+					$segments = explode('/', $tartibli_qiymat);
 					//print_r($segments);
 					//massivning birinchi elementidan controller class yasash
 					$ControllerNomi = array_shift($segments).'Controller';
@@ -30,6 +34,11 @@
 					//echo $ControllerNomi;
 					//massivning ikkinchi elementidan action metod yasash
 					$actionName = 'action'.ucfirst(array_shift($segments));
+					$parametrs = $segments;
+					/*echo "<br> controllernomi ".$ControllerNomi;
+					echo "<br> Actionnomi ".$actionName;
+					echo "<pre>";
+					print_r($segments);*/
 					//controller fayliga ulanish
 					$controllerFile = ROOT.'/controllers/'.$ControllerNomi.'.php';
 					if(file_exists($controllerFile)) {
@@ -37,10 +46,10 @@
 					}
 					//obyekt hosil qilish va metodni chaqirish
 					$controllerObyekt = new $ControllerNomi;
-					$result = $controllerObyekt->actionName();
+					/*$result = $controllerObyekt->actionName();
 					if($result != null) {
 						break;
-					}
+					}*/
 				}
 			}
 		}

@@ -1,8 +1,16 @@
 <?php 
 	class NewsController {
-		public $nomi = 'Newsdddddd';
-		public function __construct() {
-			echo $this->nomi;
-		} 
+		public function actionIndex() {
+			echo "<br> Yangiliklar ruyhati";
+			return true;
+		}
+		public function actionView($parametr) {
+			echo "<br> sahifani ko`rish";
+			echo "<br>",$parametr['0'];
+			echo "<br>",$parametr['1'];
+			return true;
+
+		}
+		
 	}
  ?>
