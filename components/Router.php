@@ -34,7 +34,7 @@
 					//echo $ControllerNomi;
 					//massivning ikkinchi elementidan action metod yasash
 					$actionName = 'action'.ucfirst(array_shift($segments));
-					$parametrs = $segments;
+					//$parametrs = $segments;
 					/*echo "<br> controllernomi ".$ControllerNomi;
 					echo "<br> Actionnomi ".$actionName;
 					echo "<pre>";
@@ -46,10 +46,11 @@
 					}
 					//obyekt hosil qilish va metodni chaqirish
 					$controllerObyekt = new $ControllerNomi;
-					/*$result = $controllerObyekt->actionName();
+					$result = call_user_func_array(array($controllerObyekt, $actionName),$segments);
+					//echo "<br>$result";
 					if($result != null) {
 						break;
-					}*/
+					}
 				}
 			}
 		}

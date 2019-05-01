@@ -4,10 +4,10 @@
 			echo "<br> Yangiliklar ruyhati";
 			return true;
 		}
-		public function actionView($parametr) {
+		public function actionView($categoriya, $id) {
 			echo "<br> sahifani ko`rish";
-			echo "<br>",$parametr['0'];
-			echo "<br>",$parametr['1'];
+			echo "<br>",$categoriya;
+			echo "<br>",$id;
 			return true;
 
 		}

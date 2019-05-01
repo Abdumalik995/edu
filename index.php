@@ -7,7 +7,7 @@
 	define('ROOT', dirname(__FILE__));
 	//echo ROOT;
 	require_once(ROOT.'/components/Router.php');
-
+	require_once(ROOT.'/components/db.php');
 	// class asosida faylni chaqirish
 	//require_once(ROOT.'/config/routes.php');
 	$obyekt = new Router;
@@ -16,6 +16,8 @@
 	//echo $obyekt->getURL();
 	$obyekt->run();
 	$a = $obyekt->routes;
+	$ob = new Db;
+	$ob->getConnection();
 
 	/*$qator = "web dasturlash";
 	$shablon = "dastur";
