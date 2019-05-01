@@ -1,7 +1,12 @@
 <?php 
+	require_once(ROOT.'/models/News.php');
 	class NewsController {
 		public function actionIndex() {
 			echo "<br> Yangiliklar ruyhati";
+			$news = array();
+			$news = News::getNewsList();
+			echo "<pre>";
+			print_r($news);
 			return true;
 		}
 		public function actionView($categoriya, $id) {
@@ -13,4 +18,6 @@
 		}
 		
 	}
+	/*$obj = new News;
+	$obj->getNewsList();*/
  ?>
