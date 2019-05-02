@@ -1,4 +1,23 @@
-<footer class="site-footer">
+<div class="py-5 block-22">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 mb-4 mb-md-0 pr-md-5">
+            <h2 class="heading">Create cool websites</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi accusantium optio und.</p>
+          </div>
+          <div class="col-md-6">
+            <form action="#" class="subscribe">
+              <div class="form-group">
+                <input type="email" class="form-control email" placeholder="Enter email">
+                <input type="submit" class="btn btn-primary submit" value="Subscribe">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <footer class="site-footer">
       <div class="container">
         <div class="row mb-5">
           <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
