@@ -2,7 +2,7 @@
 	require_once(ROOT.'/models/News.php');
 	class NewsController {
 		public function actionIndex() {
-			echo "<br> Yangiliklar ruyhati";
+			echo "<br>Yangiliklar ruyhati";
 			$news = array();
 			$news = News::getNewsList();
 			echo "<pre>";

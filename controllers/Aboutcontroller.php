@@ -1,6 +1,6 @@
 <?php 
 	class AboutController {
-		public $nomi = 'AbOUUUUUUU';
+		public $nomi = 'UUUUUUU';
 		public function __construct() {
 			echo $this->nomi;
 		} 
