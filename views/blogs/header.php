@@ -1,3 +1,6 @@
+<?php 
+  //include_once(ROOT.'/views/blogs/header.php');
+ ?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -7,17 +10,17 @@
 
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/../template/css/bootstrap.css">
+    <link rel="stylesheet" href="/../template/css/animate.css">
+    <link rel="stylesheet" href="/../template/css/owl.carousel.min.css">
 
-    <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
-    <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="/../template/fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="/../template/fonts/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/../template/fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="/../template/css/magnific-popup.css">
 
     <!-- Theme Style -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/../template/css/style.css">
   </head>
   <body>
     
@@ -32,6 +35,7 @@
 
           <div class="collapse navbar-collapse navbar-light" id="navbarsExample05">
             <ul class="navbar-nav mx-auto">
+             
               <li class="nav-item">
                 <a class="nav-link active" href="index.html">Home</a>
               </li>

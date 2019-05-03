@@ -1,4 +1,8 @@
-   <section class="site-hero overlay" data-stellar-background-ratio="0.5" style="background-image: url(images/tuit.jpg);">
+<?php 
+    //include_once(ROOT.'/views/blogs/header.php');
+    include_once('/../blogs/header.php');
+ ?>   
+   <section class="site-hero overlay" data-stellar-background-ratio="0.5" style="background-image: url(/../template/images/tuit.jpg);">
       <div class="container">
         <div class="row align-items-center justify-content-center site-hero-inner">
           <div class="col-md-10">
@@ -48,7 +52,7 @@
           <div class="col-md-6 order-md-2">
             <div class="block-16">
               <figure>
-                <img src="images/img_1.jpg" alt="Image placeholder" class="img-fluid">
+                <img src="/../template/images/img_1.jpg" alt="Image placeholder" class="img-fluid">
                 <a href="https://vimeo.com/45830194" class="play-button popup-vimeo"><span class="ion-ios-play"></span></a>
 
                 <!-- <a href="https://vimeo.com/45830194" class="button popup-vimeo" data-aos="fade-right" data-aos-delay="700"><span class="ion-ios-play"></span></a> -->
@@ -130,7 +134,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
-            <figure><img src="images/img_2_b.jpg" alt="Image placeholder" class="img-fluid"></figure>
+            <figure><img src="/../template/images/img_2_b.jpg" alt="Image placeholder" class="img-fluid"></figure>
           </div>
           <div class="col-lg-5 ml-auto">
             <div class="block-15">
@@ -210,7 +214,7 @@
           <div class="item">
             <div class="block-19">
                 <figure>
-                  <img src="images/img_1.jpg" alt="Image" class="img-fluid">
+                  <img src="/../template/images/img_1.jpg" alt="Image" class="img-fluid">
                 </figure>
                 <div class="text">
                   <h2 class="heading"><a href="#">Advanced JavaScript Learning</a></h2>
@@ -228,7 +232,7 @@
           <div class="item">
             <div class="block-19">
                 <figure>
-                  <img src="images/img_3.jpg" alt="Image" class="img-fluid">
+                  <img src="/../template/images/img_3.jpg" alt="Image" class="img-fluid">
                 </figure>
                 <div class="text">
                   <h2 class="heading"><a href="#">Advanced JavaScript Learning</a></h2>
@@ -246,7 +250,7 @@
           <div class="item">
             <div class="block-19">
               <figure>
-                <img src="images/img_2.jpg" alt="Image" class="img-fluid">
+                <img src="/../template/images/img_2.jpg" alt="Image" class="img-fluid">
               </figure>
               <div class="text">
                 <h2 class="heading"><a href="#">Introduction to CSS</a></h2>
@@ -264,7 +268,7 @@
           <div class="item">
             <div class="block-19">
               <figure>
-                <img src="images/img_1.jpg" alt="Image" class="img-fluid">
+                <img src="/../template/images/img_1.jpg" alt="Image" class="img-fluid">
               </figure>
               <div class="text">
                 <h2 class="heading"><a href="#">Design &amp; Develop</a></h2>
@@ -282,7 +286,7 @@
           <div class="item">
             <div class="block-19">
                 <figure>
-                  <img src="images/img_1.jpg" alt="Image" class="img-fluid">
+                  <img src="/../template/images/img_1.jpg" alt="Image" class="img-fluid">
                 </figure>
                 <div class="text">
                   <h2 class="heading"><a href="#">Advanced JavaScript Learning</a></h2>
@@ -300,7 +304,7 @@
           <div class="item">
             <div class="block-19">
                 <figure>
-                  <img src="images/img_3.jpg" alt="Image" class="img-fluid">
+                  <img src="/../template/images/img_3.jpg" alt="Image" class="img-fluid">
                 </figure>
                 <div class="text">
                   <h2 class="heading"><a href="#">Advanced JavaScript Learning</a></h2>
@@ -318,7 +322,7 @@
           <div class="item">
             <div class="block-19">
               <figure>
-                <img src="images/img_2.jpg" alt="Image" class="img-fluid">
+                <img src="/../template/images/img_2.jpg" alt="Image" class="img-fluid">
               </figure>
               <div class="text">
                 <h2 class="heading"><a href="#">Introduction to CSS</a></h2>
@@ -336,7 +340,7 @@
           <div class="item">
             <div class="block-19">
               <figure>
-                <img src="images/img_1.jpg" alt="Image" class="img-fluid">
+                <img src="/../template/images/img_1.jpg" alt="Image" class="img-fluid">
               </figure>
               <div class="text">
                 <h2 class="heading"><a href="#">Design &amp; Develop</a></h2>
@@ -370,7 +374,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="block-2">
             <div class="flipper">
-              <div class="front" style="background-image: url(../images/person_3.jpg);">
+              <div class="front" style="background-image: url(/../template/images/person_3.jpg);">
                 <div class="box">
                   <h2>Job Smith</h2>
                   <p>Laravel Expert</p>
@@ -383,7 +387,7 @@
                 </blockquote>
                 <div class="author d-flex">
                   <div class="image mr-3 align-self-center">
-                    <img src="images/person_3.jpg" alt="">
+                    <img src="/../template/images/person_3.jpg" alt="">
                   </div>
                   <div class="name align-self-center">Job Smith <span class="position">Laravel Expert</span></div>
                 </div>
@@ -395,7 +399,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="block-2 ">
             <div class="flipper">
-              <div class="front" style="background-image: url(../images/person_1.jpg);">
+              <div class="front" style="background-image: url(/../template/images/person_1.jpg);">
                 <div class="box">
                   <h2>Mellissa Cruz</h2>
                   <p>JavaScript Guru</p>
@@ -408,7 +412,7 @@
                 </blockquote>
                 <div class="author d-flex">
                   <div class="image mr-3 align-self-center">
-                    <img src="images/person_1.jpg" alt="">
+                    <img src="/../template/images/person_1.jpg" alt="">
                   </div>
                   <div class="name align-self-center">Mellissa Cruz <span class="position">JavaScript Guru</span></div>
                 </div>
@@ -420,7 +424,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="block-2">
             <div class="flipper">
-              <div class="front" style="background-image: url(../images/person_2.jpg);">
+              <div class="front" style="background-image: url(/../template/images/person_2.jpg);">
                 <div class="box">
                   <h2>Aldin Powell</h2>
                   <p>WordPress Ninja</p>
@@ -433,7 +437,7 @@
                 </blockquote>
                 <div class="author d-flex">
                   <div class="image mr-3 align-self-center">
-                    <img src="images/person_2.jpg" alt="">
+                    <img src="/../template/images/person_2.jpg" alt="">
                   </div>
                   <div class="name align-self-center">Aldin Powell <span class="position">WordPress Ninja</span></div>
                 </div>
@@ -460,7 +464,7 @@
 
             <div class="block-20 ">
               <figure>
-                <a href="#"><img src="images/img_1.jpg" alt="" class="img-fluid"></a>
+                <a href="#"><img src="/../template/images/img_1.jpg" alt="" class="img-fluid"></a>
               </figure>
               <div class="text">
                 <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
@@ -477,7 +481,7 @@
             
             <div class="block-21 d-flex mb-4">
               <figure class="mr-3">
-                <a href="#"><img src="images/img_1.jpg" alt="" class="img-fluid"></a>
+                <a href="#"><img src="/../template/images/img_1.jpg" alt="" class="img-fluid"></a>
               </figure>
               <div class="text">
                 <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
@@ -491,7 +495,7 @@
 
             <div class="block-21 d-flex mb-4">
               <figure class="mr-3">
-                <a href="#"><img src="images/img_2.jpg" alt="" class="img-fluid"></a>
+                <a href="#"><img src="/../template/images/img_2.jpg" alt="" class="img-fluid"></a>
               </figure>
               <div class="text">
                 <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
@@ -505,7 +509,7 @@
 
             <div class="block-21 d-flex mb-4">
               <figure class="mr-3">
-                <a href="#"><img src="images/img_3.jpg" alt="" class="img-fluid"></a>
+                <a href="#"><img src="/../template/images/img_3.jpg" alt="" class="img-fluid"></a>
               </figure>
               <div class="text">
                 <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
@@ -519,7 +523,7 @@
 
             <div class="block-21 d-flex mb-4">
               <figure class="mr-3">
-                <a href="#"><img src="images/img_3.jpg" alt="" class="img-fluid"></a>
+                <a href="#"><img src="/../template/images/img_3.jpg" alt="" class="img-fluid"></a>
               </figure>
               <div class="text">
                 <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
@@ -535,3 +539,6 @@
         </div>
       </div>
     </div>
+<?php 
+    include_once('/../blogs/footer.php');
+ ?>
