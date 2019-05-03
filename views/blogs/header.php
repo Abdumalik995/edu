@@ -46,15 +46,20 @@
                 <a class="nav-link" href="about.html">Muallif haqida</a>
               </li>
               <?php 
-                foreach ($menu_asosiy as $asosiy) { ?>
+                foreach ($menu_asosiy as $menyu1) { ?>
                   <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="courses.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?=$asosiy?></a>
+                <a class="nav-link dropdown-toggle" href="courses.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $menyu1['name'] ?></a>
                 <div class="dropdown-menu" aria-labelledby="dropdown04">
-                  <a class="dropdown-item" href="courses.html">HTML</a>
-                  <a class="dropdown-item" href="courses.html">WordPress</a>
-                  <a class="dropdown-item" href="courses.html">Laravel</a>
-                  <a class="dropdown-item" href="courses.html">JavaScript</a>
-                  <a class="dropdown-item" href="courses.html">Python</a>
+                  <?php 
+                    foreach ($menular as $pastki_menu) { ?>
+                      <a class="dropdown-item" href="courses.html"><?php
+                       if($menyu_asosiy['id'] == $menular['cat_id']) {
+                        echo $pastki_menu;
+                       } ?></a>
+                   <?php }
+                   ?>
+                  
+                 
                 </div>
 
               </li>

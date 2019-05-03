@@ -3,12 +3,12 @@
 		public static function getMenu() {
 			$db = Db::getConnection();
 			$menuList = array();
-			$result = $db->query("Select * fro type_content where ");
+			$result = $db->query("Select * from type_content");
 			$i = 0;
 			while($row = $result->fetch()) {
 				$menuList[$i]['id'] =$row['id'];
-				$menuList[$i]['asosiy'] =$row['asosiy'];
-				$menuList[$i]['menu'] =$row['menu'];
+				$menuList[$i]['name'] =$row['name'];
+				$menuList[$i]['cat_id'] =$row['cat_id'];
 				$i++;
 			}
 			return $menuList;
@@ -20,8 +20,8 @@
 			$result2 = $db -> query("Select * from category");
 			$i = 0;
 			while($row = $result2->fetch()) {
-				$menu[$i] = $row['id'];
-				$menu[$i] = $row['name'];
+				$menu[$i]['id'] = $row['id'];
+				$menu[$i]['name'] = $row['name'];
 				$i++;
 			}
 			return $menu;

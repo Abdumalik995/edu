@@ -7,10 +7,10 @@
 			$menular = array();
 			$menular = Content::getMenu();
 			//echo "<pre>";
-			//print_r($menular);
+			print_r($menular);
 			$menu_asosiy = array();
 			$menu_asosiy = Content::menuAsosiy();
-			print_r($menu_asosiy);
+			//print_r($menu_asosiy);
 			require_once(ROOT.'/views/main/index.php');
 			return true;
 		}
