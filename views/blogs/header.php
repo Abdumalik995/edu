@@ -52,9 +52,11 @@
                 <div class="dropdown-menu" aria-labelledby="dropdown04">
                   <?php 
                     foreach ($menular as $pastki_menu) { ?>
-                      <a class="dropdown-item" href="courses.html"><?php
-                       if($menyu_asosiy['id'] == $menular['cat_id']) {
-                        echo $pastki_menu;
+                      <a class="dropdown-item" href="courses.html"><?php                      
+                       if($menyu1['id'] == $pastki_menu['cat_id']) {
+                        echo $pastki_menu['name'];
+                       } else {
+                        
                        } ?></a>
                    <?php }
                    ?>
