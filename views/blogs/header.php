@@ -1,5 +1,5 @@
 <?php 
-  //include_once(ROOT.'/views/blogs/header.php');
+  //include_once(ROOT.'/views/blogs/header.php'); // shunchaki xatolikni tekshirish uchun
  ?>
 <!doctype html>
 <html lang="en">
@@ -37,10 +37,18 @@
             <ul class="navbar-nav mx-auto">
              
               <li class="nav-item">
-                <a class="nav-link active" href="index.html">Home</a>
+                <a class="nav-link active" href="index.html">Asosiy</a>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="courses.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Courses</a>
+              <li class="nav-item">
+                <a class="nav-link" href="blog.html">Yangiliklar</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">Muallif haqida</a>
+              </li>
+              <?php 
+                foreach ($menu_asosiy as $asosiy) { ?>
+                  <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="courses.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?=$asosiy?></a>
                 <div class="dropdown-menu" aria-labelledby="dropdown04">
                   <a class="dropdown-item" href="courses.html">HTML</a>
                   <a class="dropdown-item" href="courses.html">WordPress</a>
@@ -50,26 +58,13 @@
                 </div>
 
               </li>
-
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
-                <div class="dropdown-menu" aria-labelledby="dropdown05">
-                  <a class="dropdown-item" href="#">HTML</a>
-                  <a class="dropdown-item" href="#">WordPress</a>
-                  <a class="dropdown-item" href="#">Laravel</a>
-                  <a class="dropdown-item" href="#">JavaScript</a>
-                  <a class="dropdown-item" href="#">Python</a>
-                </div>
-
-              </li>
+              <?php 
+                }
+               ?>
+              
+              
               <li class="nav-item">
-                <a class="nav-link" href="blog.html">Blog</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
+                <a class="nav-link" href="contact.html">Aloqa</a>
               </li>
             </ul>
             <ul class="navbar-nav absolute-right">

@@ -1,12 +1,17 @@
 <?php 
-	require_once(ROOT.'/models/Main.php');
+	require_once(ROOT.'/models/Content.php');
 	class MainController {
 		public function actionIndex() {
-			echo "<br>Categoriyalar";
-			$news = array();
-			$news = News::getNewsList();
-			echo "<pre>";
-			print_r($news);
+			
+			//echo "<br>Categoriyalar";
+			$menular = array();
+			$menular = Content::getMenu();
+			//echo "<pre>";
+			//print_r($menular);
+			$menu_asosiy = array();
+			$menu_asosiy = Content::menuAsosiy();
+			print_r($menu_asosiy);
+			require_once(ROOT.'/views/main/index.php');
 			return true;
 		}
 		
