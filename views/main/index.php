@@ -1,6 +1,7 @@
 <?php 
     //include_once(ROOT.'/views/blogs/header.php');
     include_once('/../blogs/header.php');
+
  ?>   
    <section class="site-hero overlay" data-stellar-background-ratio="0.5" style="background-image: url(/../template/images/tuit.jpg);">
       <div class="container">
@@ -84,47 +85,20 @@
     <section class="site-section pt-3 element-animate">
       <div class="container">
         <div class="row">
-          <div class="col-md-6 col-lg-3">
-            <div class="media block-6 d-block">
-              <div class="icon mb-3"><span class="flaticon-book"></span></div>
-              <div class="media-body">
-                <h3 class="heading">Knowledge is power</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit mess.</p>
-                <p><a href="#" class="more">Read More <span class="ion-arrow-right-c"></span></a></p>
-              </div>
-            </div> 
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="media block-6 d-block">
-              <div class="icon mb-3"><span class="flaticon-student"></span></div>
-              <div class="media-body">
-                <h3 class="heading">Senior High School</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit mess.</p>
-                <p><a href="#" class="more">Read More <span class="ion-arrow-right-c"></span></a></p>
-              </div>
-            </div> 
-          </div>
+            <?php foreach ($news as $new) { ?>
+                <div class="col-md-6 col-lg-3">
+                    <div class="media block-6 d-block">
+                        <div class="icon mb-3"><span class="flaticon-book"></span></div>
+                        <div class="media-body">
+                            <h3 class="heading">Knowledge is power</h3>
+                            <p><?php echo $new['name'] ?></p>
+                            <p><a href="#" class="more">Read More <span class="ion-arrow-right-c"></span></a></p>
+                        </div>
+                    </div> 
+                </div> 
+            <?php } ?>
           
-          <div class="col-md-6 col-lg-3">
-            <div class="media block-6 d-block">
-              <div class="icon mb-3"><span class="flaticon-diploma"></span></div>
-              <div class="media-body">
-                <h3 class="heading">College of Arts &amp; Sciences</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit mess.</p>
-                <p><a href="#" class="more">Read More <span class="ion-arrow-right-c"></span></a></p>
-              </div>
-            </div> 
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="media block-6 d-block">
-              <div class="icon mb-3"><span class="flaticon-professor"></span></div>
-              <div class="media-body">
-                <h3 class="heading">Unmatched Proffessor</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit mess.</p>
-                <p><a href="#" class="more">Read More <span class="ion-arrow-right-c"></span></a></p>
-              </div>
-            </div> 
-          </div>
+          
         </div>
       </div>
     </section>

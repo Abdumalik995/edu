@@ -11,6 +11,9 @@
 			$menu_asosiy = array();
 			$menu_asosiy = Content::menuAsosiy();
 			//print_r($menu_asosiy);
+			$news = array();
+			$news = Content::menuNews();
+			//print_r($news);
 			require_once(ROOT.'/views/main/index.php');
 			return true;
 		}
