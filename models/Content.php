@@ -3,7 +3,7 @@
 		public static function getMenu() {
 			$db = Db::getConnection();
 			$menuList = array();
-			$result = $db->query("Select * from type_content");
+			$result = $db->query("SELECT * FROM menu ORDER BY joylashuv asc");
 			$i = 0;
 			while($row = $result->fetch()) {
 				$menuList[$i]['id'] =$row['id'];

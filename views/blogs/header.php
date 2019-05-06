@@ -35,8 +35,7 @@
 
           <div class="collapse navbar-collapse navbar-light" id="navbarsExample05">
             <ul class="navbar-nav mx-auto">
-             
-              <li class="nav-item">
+             <!--<li class="nav-item">
                 <a class="nav-link active" href="index.html">Asosiy</a>
               </li>
               <li class="nav-item">
@@ -44,35 +43,28 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="about.html">Muallif haqida</a>
-              </li>
-              <?php 
-                foreach ($menu_asosiy as $menyu1) { ?>
-                  <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="courses.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $menyu1['name'] ?></a>
-                <div class="dropdown-menu" aria-labelledby="dropdown04">
-                  <?php 
-                    foreach ($menular as $pastki_menu) { ?>
-                      <a class="dropdown-item" href="courses.html"><?php                      
-                       if($menyu1['id'] == $pastki_menu['cat_id']) {
-                        echo $pastki_menu['name'];
-                       } else {
-                        
-                       } ?></a>
-                   <?php }
-                   ?>
-                  
-                 
-                </div>
+              </li> -->
+           <?php foreach ($asosiy_menu as $menyu1) {
+            $isDropdown=count($menyu1['sub_menu']) ;?>
+            
+              <li class="nav-item <?php echo $isDropdown?'dropdown':''?>">
+                <a class="nav-link <?php echo $isDropdown?'dropdown-toggle':''?>" href="courses.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <?php echo $menyu1['name'] ?>
+                    
+                  </a> 
+                  <?php if($isDropdown):?>
+                  <div class="dropdown-menu" aria-labelledby="dropdown04">
+                    <?php foreach ($menyu1['sub_menu'] as $pastki_menu) { ?>
+                    <a class="dropdown-item" href="courses.html">
+                      <?= $pastki_menu['name']?></a>
+                    <?php } ?>
 
+                  </div>
+                <?php endif;?>
               </li>
-              <?php 
-                }
-               ?>
-              
-              
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Aloqa</a>
-              </li>
+            <?php } ?>
+                
+             
             </ul>
             <ul class="navbar-nav absolute-right">
               <li>
