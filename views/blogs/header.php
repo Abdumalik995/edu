@@ -44,7 +44,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="about.html">Muallif haqida</a>
               </li> -->
-           <?php foreach ($asosiy_menu as $menyu1) {
+           <?php foreach ($menu_asosiy as $menyu1) {
             $isDropdown=count($menyu1['sub_menu']) ;?>
             
               <li class="nav-item <?php echo $isDropdown?'dropdown':''?>">
@@ -52,7 +52,7 @@
                   <?php echo $menyu1['name'] ?>
                     
                   </a> 
-                  <?php if($isDropdown):?>
+                  <?php if($isDropdown) { ?>
                   <div class="dropdown-menu" aria-labelledby="dropdown04">
                     <?php foreach ($menyu1['sub_menu'] as $pastki_menu) { ?>
                     <a class="dropdown-item" href="courses.html">
@@ -60,7 +60,7 @@
                     <?php } ?>
 
                   </div>
-                <?php endif;?>
+                <?php } ?>
               </li>
             <?php } ?>
                 

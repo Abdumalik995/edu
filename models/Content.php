@@ -1,28 +1,25 @@
 <?php 
-	class Content {
-		public static function getMenu() {
-			$db = Db::getConnection();
-			$menuList = array();
-			$result = $db->query("SELECT * FROM menu ORDER BY joylashuv asc");
-			$i = 0;
-			while($row = $result->fetch()) {
-				$menuList[$i]['id'] =$row['id'];
-				$menuList[$i]['name'] =$row['name'];
-				$menuList[$i]['cat_id'] =$row['cat_id'];
-				$i++;
-			}
-			return $menuList;
-		}
+	class Content {	
 		//menyuni asosiylarini chiqarish
 		public static function menuAsosiy() {
 			$db = Db::getConnection();
 			$menu = array();
-			$result2 = $db -> query("Select * from category");
+			$result2 = $db -> query("SELECT * FROM menu ORDER BY joylashuv asc");
 			$i = 0;
 			while($row = $result2->fetch()) {
-				$menu[$i]['id'] = $row['id'];
-				$menu[$i]['name'] = $row['name'];
-				$i++;
+				$menu[$row['id']] = [
+					'name' => $row['name'],
+					'parent_id' => $row['parent_id']
+				];
+				$menu[$row['id']]['sub_menu'] = [];
+				
+			}
+
+			foreach($menu as $key => $value) {
+				if($value['parent_id']) {
+					$menu[$value['parent_id']]['sub_menu'][] = $value;
+					unset($menu[$key]);
+				}
 			}
 			return $menu;
 		}

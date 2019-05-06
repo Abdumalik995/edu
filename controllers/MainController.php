@@ -4,8 +4,8 @@
 		public function actionIndex() {
 			
 			//echo "<br>Categoriyalar";
-			$menular = array();
-			$menular = Content::getMenu();
+			/*$menular = array();
+			$menular = Content::getMenu();*/
 			//echo "<pre>";
 			//>>>print_r($menular);
 			$menu_asosiy = array();
