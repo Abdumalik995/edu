@@ -23,5 +23,9 @@
 			}
 			return $menu;
 		}
+
+		public static function menuNews() {
+			$db = DB::getConnection();
+		}
 	}
  ?>
