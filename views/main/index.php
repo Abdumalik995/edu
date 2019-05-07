@@ -110,62 +110,24 @@
 
           </div>
           <div class="col-md-12 col-lg-6">
-            
-            <div class="block-21 d-flex mb-4">
+            <?php foreach ($news_block as $newss) { ?>
+                <div class="block-21 d-flex mb-4">
               <figure class="mr-3">
                 <a href="#"><img src="/../template/images/img_1.jpg" alt="" class="img-fluid"></a>
               </figure>
               <div class="text">
-                <h3 class="heading"><a href="#"><?php echo $news_block['0']['name'] ?></a></h3>
+                <h3 class="heading"><a href="#"><?php echo $newss['name'] ?></a></h3>
                 <div class="meta">
                   <div><a href="#"><span class="ion-android-calendar"></span> May 29, 2018</a></div>
                   <div><a href="#"><span class="ion-android-person"></span> Admin</a></div>
                   <div><a href="#"><span class="ion-chatbubble"></span> 19</a></div>
                 </div>
               </div>
-            </div>  
+            </div>
+           <?php } ?>
+              
 
-            <div class="block-21 d-flex mb-4">
-              <figure class="mr-3">
-                <a href="#"><img src="/../template/images/img_2.jpg" alt="" class="img-fluid"></a>
-              </figure>
-              <div class="text">
-                <h3 class="heading"><a href="#"><?php echo $news_block['1']['name'] ?></a></h3>
-                <div class="meta">
-                  <div><a href="#"><span class="ion-android-calendar"></span> May 29, 2018</a></div>
-                  <div><a href="#"><span class="ion-android-person"></span> Admin</a></div>
-                  <div><a href="#"><span class="ion-chatbubble"></span> 19</a></div>
-                </div>
-              </div>
-            </div>  
-
-            <div class="block-21 d-flex mb-4">
-              <figure class="mr-3">
-                <a href="#"><img src="/../template/images/img_3.jpg" alt="" class="img-fluid"></a>
-              </figure>
-              <div class="text">
-                <h3 class="heading"><a href="#"><?php echo $news_block['2']['name'] ?></a></h3>
-                <div class="meta">
-                  <div><a href="#"><span class="ion-android-calendar"></span> May 29, 2018</a></div>
-                  <div><a href="#"><span class="ion-android-person"></span> Admin</a></div>
-                  <div><a href="#"><span class="ion-chatbubble"></span> 19</a></div>
-                </div>
-              </div>
-            </div>  
-
-            <div class="block-21 d-flex mb-4">
-              <figure class="mr-3">
-                <a href="#"><img src="/../template/images/person_3.jpg" alt="" class="img-fluid"></a>
-              </figure>
-              <div class="text">
-                <h3 class="heading"><a href="#"><?php echo $news_block['1']['name'] ?></a></h3>
-                <div class="meta">
-                  <div><a href="#"><span class="ion-android-calendar"></span> May 29, 2018</a></div>
-                  <div><a href="#"><span class="ion-android-person"></span> Admin</a></div>
-                  <div><a href="#"><span class="ion-chatbubble"></span> 19</a></div>
-                </div>
-              </div>
-            </div>  
+             
 
           </div>
         </div>
