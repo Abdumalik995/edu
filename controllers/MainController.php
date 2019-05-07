@@ -1,5 +1,6 @@
 <?php 
 	require_once(ROOT.'/models/Content.php');
+	require_once(ROOT.'/models/News.php');
 	class MainController {
 		public function actionIndex() {
 			
@@ -17,6 +18,9 @@
 
 			$seos = array();
 			$seos = CONTENT::seo();
+
+			$news_block = array();
+			$news_block = News::getNewsList();
 			require_once(ROOT.'/views/main/index.php');
 			return true;
 		}

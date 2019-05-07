@@ -81,7 +81,97 @@
       </div>
     </section>
     <!-- END section -->
+    <!-- str section -->
+    <div class="site-section bg-light">
+      <div class="container">
+        <div class="row justify-content-center mb-5 element-animate">
+          <div class="col-md-7 text-center section-heading">
+            <h2 class="text-primary heading">Yangiliklar</h2>
+            
+          </div>
+        </div>
+        <div class="row element-animate">
+          
+          <div class="col-md-12 mb-5 mb-lg-0 col-lg-6">
 
+            <div class="block-20 ">
+              <figure>
+                <a href="#"><img src="/../template/images/img_1.jpg" alt="" class="img-fluid"></a>
+              </figure>
+              <div class="text">
+                <h3 class="heading"><a href="#"><?php echo $news_block['0']['name'] ?></a></h3>
+                <div class="meta">
+                  <div><a href="#"><span class="ion-android-calendar"></span> May 29, 2018</a></div>
+                  <div><a href="#"><span class="ion-android-person"></span> Admin</a></div>
+                  <div><a href="#"><span class="ion-chatbubble"></span> 19</a></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-12 col-lg-6">
+            
+            <div class="block-21 d-flex mb-4">
+              <figure class="mr-3">
+                <a href="#"><img src="/../template/images/img_1.jpg" alt="" class="img-fluid"></a>
+              </figure>
+              <div class="text">
+                <h3 class="heading"><a href="#"><?php echo $news_block['0']['name'] ?></a></h3>
+                <div class="meta">
+                  <div><a href="#"><span class="ion-android-calendar"></span> May 29, 2018</a></div>
+                  <div><a href="#"><span class="ion-android-person"></span> Admin</a></div>
+                  <div><a href="#"><span class="ion-chatbubble"></span> 19</a></div>
+                </div>
+              </div>
+            </div>  
+
+            <div class="block-21 d-flex mb-4">
+              <figure class="mr-3">
+                <a href="#"><img src="/../template/images/img_2.jpg" alt="" class="img-fluid"></a>
+              </figure>
+              <div class="text">
+                <h3 class="heading"><a href="#"><?php echo $news_block['1']['name'] ?></a></h3>
+                <div class="meta">
+                  <div><a href="#"><span class="ion-android-calendar"></span> May 29, 2018</a></div>
+                  <div><a href="#"><span class="ion-android-person"></span> Admin</a></div>
+                  <div><a href="#"><span class="ion-chatbubble"></span> 19</a></div>
+                </div>
+              </div>
+            </div>  
+
+            <div class="block-21 d-flex mb-4">
+              <figure class="mr-3">
+                <a href="#"><img src="/../template/images/img_3.jpg" alt="" class="img-fluid"></a>
+              </figure>
+              <div class="text">
+                <h3 class="heading"><a href="#"><?php echo $news_block['2']['name'] ?></a></h3>
+                <div class="meta">
+                  <div><a href="#"><span class="ion-android-calendar"></span> May 29, 2018</a></div>
+                  <div><a href="#"><span class="ion-android-person"></span> Admin</a></div>
+                  <div><a href="#"><span class="ion-chatbubble"></span> 19</a></div>
+                </div>
+              </div>
+            </div>  
+
+            <div class="block-21 d-flex mb-4">
+              <figure class="mr-3">
+                <a href="#"><img src="/../template/images/person_3.jpg" alt="" class="img-fluid"></a>
+              </figure>
+              <div class="text">
+                <h3 class="heading"><a href="#"><?php echo $news_block['1']['name'] ?></a></h3>
+                <div class="meta">
+                  <div><a href="#"><span class="ion-android-calendar"></span> May 29, 2018</a></div>
+                  <div><a href="#"><span class="ion-android-person"></span> Admin</a></div>
+                  <div><a href="#"><span class="ion-chatbubble"></span> 19</a></div>
+                </div>
+              </div>
+            </div>  
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end section -->
     <section class="site-section pt-3 element-animate">
       <div class="container">
         <div class="row">
@@ -128,7 +218,7 @@
                   </div>
                   <div class="text">
                     <strong class="number" data-number="<?php echo $seos['0']['short_s'] ?>">0</strong>
-                    <span>Students</span>
+                    <span>Talabalar</span>
                   </div>
                 </div>
 
@@ -138,7 +228,7 @@
                   </div>
                   <div class="text">
                     <strong class="number" data-number="<?php echo $seos['0']['short_b'] ?>">0</strong>
-                    <span>Schools</span>
+                    <span>Universitetlar</span>
                   </div>
                 </div>
 
@@ -146,11 +236,11 @@
               <div class="col-md-6">
                 <div class="block-18 d-flex align-items-center">
                   <div class="icon mr-4">
-                    <span class="flaticon-books"></span>
+                    <span class="flaticon-university"></span>
                   </div>
                   <div class="text">
                     <strong class="number" data-number="<?php echo $seos['0']['short_school'] ?>">0</strong>
-                    <span>Books</span>
+                    <span>Maktablar</span>
                   </div>
                 </div>
 
@@ -160,7 +250,7 @@
                   </div>
                   <div class="text">
                     <strong class="number" data-number="<?php echo $seos['0']['short_teacher'] ?>">0</strong>
-                    <span>Graduates</span>
+                    <span>O`qituvchilar</span>
                   </div>
                 </div>
                 
@@ -424,95 +514,7 @@
     <!-- END .block-2 -->
 
 
-    <div class="site-section bg-light">
-      <div class="container">
-        <div class="row justify-content-center mb-5 element-animate">
-          <div class="col-md-7 text-center section-heading">
-            <h2 class="text-primary heading">Blog</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit qui neque sint eveniet tempore sapiente.</p>
-          </div>
-        </div>
-        <div class="row element-animate">
-          
-          <div class="col-md-12 mb-5 mb-lg-0 col-lg-6">
-
-            <div class="block-20 ">
-              <figure>
-                <a href="#"><img src="/../template/images/img_1.jpg" alt="" class="img-fluid"></a>
-              </figure>
-              <div class="text">
-                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-                <div class="meta">
-                  <div><a href="#"><span class="ion-android-calendar"></span> May 29, 2018</a></div>
-                  <div><a href="#"><span class="ion-android-person"></span> Admin</a></div>
-                  <div><a href="#"><span class="ion-chatbubble"></span> 19</a></div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <div class="col-md-12 col-lg-6">
-            
-            <div class="block-21 d-flex mb-4">
-              <figure class="mr-3">
-                <a href="#"><img src="/../template/images/img_1.jpg" alt="" class="img-fluid"></a>
-              </figure>
-              <div class="text">
-                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-                <div class="meta">
-                  <div><a href="#"><span class="ion-android-calendar"></span> May 29, 2018</a></div>
-                  <div><a href="#"><span class="ion-android-person"></span> Admin</a></div>
-                  <div><a href="#"><span class="ion-chatbubble"></span> 19</a></div>
-                </div>
-              </div>
-            </div>  
-
-            <div class="block-21 d-flex mb-4">
-              <figure class="mr-3">
-                <a href="#"><img src="/../template/images/img_2.jpg" alt="" class="img-fluid"></a>
-              </figure>
-              <div class="text">
-                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-                <div class="meta">
-                  <div><a href="#"><span class="ion-android-calendar"></span> May 29, 2018</a></div>
-                  <div><a href="#"><span class="ion-android-person"></span> Admin</a></div>
-                  <div><a href="#"><span class="ion-chatbubble"></span> 19</a></div>
-                </div>
-              </div>
-            </div>  
-
-            <div class="block-21 d-flex mb-4">
-              <figure class="mr-3">
-                <a href="#"><img src="/../template/images/img_3.jpg" alt="" class="img-fluid"></a>
-              </figure>
-              <div class="text">
-                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-                <div class="meta">
-                  <div><a href="#"><span class="ion-android-calendar"></span> May 29, 2018</a></div>
-                  <div><a href="#"><span class="ion-android-person"></span> Admin</a></div>
-                  <div><a href="#"><span class="ion-chatbubble"></span> 19</a></div>
-                </div>
-              </div>
-            </div>  
-
-            <div class="block-21 d-flex mb-4">
-              <figure class="mr-3">
-                <a href="#"><img src="/../template/images/img_3.jpg" alt="" class="img-fluid"></a>
-              </figure>
-              <div class="text">
-                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-                <div class="meta">
-                  <div><a href="#"><span class="ion-android-calendar"></span> May 29, 2018</a></div>
-                  <div><a href="#"><span class="ion-android-person"></span> Admin</a></div>
-                  <div><a href="#"><span class="ion-chatbubble"></span> 19</a></div>
-                </div>
-              </div>
-            </div>  
-
-          </div>
-        </div>
-      </div>
-    </div>
+    
 <?php 
     include_once('/../blogs/footer.php');
  ?>
