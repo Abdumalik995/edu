@@ -10,7 +10,7 @@
   
             <div class="mb-5 element-animate">
               <div class="block-17">
-                <h2 class="heading text-center mb-4 text-light font-weight-bold"><?php echo WEBNAME ?></h2>
+                <h2 class="heading text-center mb-4 font-weight-bold"><?php echo WEBNAME ?></h2>
                 <form action="" method="post" class="d-block d-lg-flex mb-4">
                   <div class="fields d-block d-lg-flex">
                     <div class="textfield-search one-third"><input type="text" class="form-control" placeholder="Keyword search..."></div>
@@ -94,7 +94,7 @@
 
             <div class="block-20 ">
               <figure>
-                <a href="#"><img src="/../template/images/<?=$max_news['img']?>" alt="" class="img-fluid"></a>
+                <a href="#"><img src="/../template/images/<?=$max_news['img']?>" alt="" class="img-fluid" style="width:100%;height:440px"></a>
               </figure>
               <div class="text">
                 <h3 class="heading"><a href="#"><?=$max_news['name']?></a></h3>
@@ -109,19 +109,19 @@
           </div>
           <div class="col-md-12 col-lg-6">
             <?php foreach ($news_block as $newss) { ?>
-                <div class="block-21 d-flex mb-4">
-              <figure class="mr-3">
-                <a href="#"><img src="/../template/images/ttt.jpg" alt="" class="img-fluid"></a>
-              </figure>
-              <div class="text">
-                <h3 class="heading"><a href="#"><?php echo $newss['name'] ?></a></h3>
-                <div class="meta">
-                  <div><a href="#"><span class="ion-android-calendar"></span> May 29, 2018</a></div>
-                  <div><a href="#"><span class="ion-android-person"></span> Admin</a></div>
-                  <div><a href="#"><span class="ion-chatbubble"></span> 19</a></div>
+                <div class="block-21 d-flex mb-5">
+                    <figure class="mr-3">
+                       <a href="#"><img src="/../template/images/ttt.jpg" alt="" class="img-fluid"></a>
+                    </figure>
+                    <div class="text">
+                        <h3 class="heading"><a href="#"><?php echo $newss['name'] ?></a></h3>
+                        <div class="meta">
+                            <div><a href="#"><span class="ion-android-calendar"></span> May 29, 2018</a></div>
+                            <div><a href="#"><span class="ion-android-person"></span> Admin</a></div>
+                            <div><a href="#"><span class="ion-chatbubble"></span> 19</a></div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
            <?php } ?>
               
 
