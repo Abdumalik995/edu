@@ -113,10 +113,10 @@
           <div class="col-lg-5 ml-auto">
             <div class="block-15">
               <div class="heading">
-                <h2>Education is Life</h2>
+                <h2><?php echo $seos['0']['name']; ?></h2>
               </div>
               <div class="text mb-5">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A quibusdam nisi eos accusantium eligendi velit deleniti nihil ad deserunt rerum incidunt.</p>
+                <p><?php echo $seos['0']['title']; ?></p>
               </div>
             </div>
 
@@ -127,7 +127,7 @@
                     <span class="flaticon-student"></span>
                   </div>
                   <div class="text">
-                    <strong class="number" data-number="12921">0</strong>
+                    <strong class="number" data-number="<?php echo $seos['0']['short_s'] ?>">0</strong>
                     <span>Students</span>
                   </div>
                 </div>
@@ -137,7 +137,7 @@
                     <span class="flaticon-university"></span>
                   </div>
                   <div class="text">
-                    <strong class="number" data-number="51">0</strong>
+                    <strong class="number" data-number="<?php echo $seos['0']['short_b'] ?>">0</strong>
                     <span>Schools</span>
                   </div>
                 </div>
@@ -149,7 +149,7 @@
                     <span class="flaticon-books"></span>
                   </div>
                   <div class="text">
-                    <strong class="number" data-number="3902">0</strong>
+                    <strong class="number" data-number="<?php echo $seos['0']['short_school'] ?>">0</strong>
                     <span>Books</span>
                   </div>
                 </div>
@@ -159,7 +159,7 @@
                     <span class="flaticon-mortarboard"></span>
                   </div>
                   <div class="text">
-                    <strong class="number" data-number="1921">0</strong>
+                    <strong class="number" data-number="<?php echo $seos['0']['short_teacher'] ?>">0</strong>
                     <span>Graduates</span>
                   </div>
                 </div>

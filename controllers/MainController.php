@@ -14,6 +14,9 @@
 			$news = array();
 			$news = Content::menuNews();
 			//print_r($news);
+
+			$seos = array();
+			$seos = CONTENT::seo();
 			require_once(ROOT.'/views/main/index.php');
 			return true;
 		}

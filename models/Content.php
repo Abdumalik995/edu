@@ -44,10 +44,20 @@
 			$db = DB::getConnection();
 			$seo = [];
 			$result4 = $db->query('SELECT * FROM seo');
+			$i =0;
 			while($row4 = $result4->fetch()) {
 				$seo[$i]['id'] = $row4['id'];	
-				$seo[$i]['name'] = $row4['name'];	
+				$seo[$i]['name'] = $row4['name'];				
+				$seo[$i]['title'] = $row4['title'];	
+				$seo[$i]['img'] = $row4['img'];	
+				$seo[$i]['short_s'] = $row4['short_s'];	
+				$seo[$i]['short_b'] = $row4['short_b'];	
+				$seo[$i]['short_school'] = $row4['short_school'];	
+				$seo[$i]['short_teacher'] = $row4['short-teacher'];	
+				$seo[$i]['site_about'] = $row4['site_about'];	
+				$i++;
 			}
+			 return $seo;
 		}
 	}
  ?>
