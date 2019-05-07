@@ -10,7 +10,7 @@
   
             <div class="mb-5 element-animate">
               <div class="block-17">
-                <h2 class="heading text-center mb-4">Tashkent University Information Technology</h2>
+                <h2 class="heading text-center mb-4"><?php echo WEBNAME ?></h2>
                 <form action="" method="post" class="d-block d-lg-flex mb-4">
                   <div class="fields d-block d-lg-flex">
                     <div class="textfield-search one-third"><input type="text" class="form-control" placeholder="Keyword search..."></div>
@@ -54,7 +54,7 @@
             <div class="block-16">
               <figure>
                 <img src="/../template/images/img_1.jpg" alt="Image placeholder" class="img-fluid">
-                <a href="https://vimeo.com/45830194" class="play-button popup-vimeo"><span class="ion-ios-play"></span></a>
+                <a href="/../template/images/uploads/tatu.mp4" class="play-button popup-vimeo"><span class="ion-ios-play"></span></a>
 
                 <!-- <a href="https://vimeo.com/45830194" class="button popup-vimeo" data-aos="fade-right" data-aos-delay="700"><span class="ion-ios-play"></span></a> -->
 

@@ -39,5 +39,15 @@
 			}
 			return $news;
 		}
+
+		public static function seo() {
+			$db = DB::getConnection();
+			$seo = [];
+			$result4 = $db->query('SELECT * FROM seo');
+			while($row4 = $result4->fetch()) {
+				$seo[$i]['id'] = $row4['id'];	
+				$seo[$i]['name'] = $row4['name'];	
+			}
+		}
 	}
  ?>

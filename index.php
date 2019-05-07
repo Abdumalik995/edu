@@ -5,6 +5,7 @@
 	error_reporting(E_ALL);
 	//2.faylga ulanish
 	define('ROOT', dirname(__FILE__));
+	define('WEBNAME', "TATU ta'lim tizimi");
 	//echo ROOT;
 	require_once(ROOT.'/components/Router.php');
 	require_once(ROOT.'/components/db.php');
