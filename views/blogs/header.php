@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
-
+    <link href="/../template/images/info.jpg" rel="icon" sizes="32x32" type="image/jpg">
     <link rel="stylesheet" href="/../template/css/bootstrap.css">
     <link rel="stylesheet" href="/../template/css/animate.css">
     <link rel="stylesheet" href="/../template/css/owl.carousel.min.css">

@@ -10,7 +10,7 @@
   
             <div class="mb-5 element-animate">
               <div class="block-17">
-                <h2 class="heading text-center mb-4"><?php echo WEBNAME ?></h2>
+                <h2 class="heading text-center mb-4 text-light font-weight-bold"><?php echo WEBNAME ?></h2>
                 <form action="" method="post" class="d-block d-lg-flex mb-4">
                   <div class="fields d-block d-lg-flex">
                     <div class="textfield-search one-third"><input type="text" class="form-control" placeholder="Keyword search..."></div>
@@ -35,9 +35,7 @@
                     </div>
                   </div>
                   <input type="submit" class="search-submit btn btn-primary" value="Search">  
-                </form>
-                <p class="text-center mb-5">We have more than 500 courses to improve your skills</p>
-                <p class="text-center"><a href="#" class="btn py-3 px-5">Register Now</a></p>
+                </form>                
               </div>
             </div>
             
@@ -53,7 +51,7 @@
           <div class="col-md-6 order-md-2">
             <div class="block-16">
               <figure>
-                <img src="/../template/images/img_1.jpg" alt="Image placeholder" class="img-fluid">
+                <img src="/../template/images/kt.jpg" alt="Image placeholder" class="" style="width:100%;height:100">
                 <a href="/../template/images/uploads/tatu.mp4" class="play-button popup-vimeo"><span class="ion-ios-play"></span></a>
 
                 <!-- <a href="https://vimeo.com/45830194" class="button popup-vimeo" data-aos="fade-right" data-aos-delay="700"><span class="ion-ios-play"></span></a> -->
@@ -70,7 +68,7 @@
               <div class="text mb-5">
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A quibusdam nisi eos accusantium eligendi velit deleniti nihil ad deserunt rerum incidunt nulla nemo eius molestiae architecto beatae asperiores doloribus animi.</p>
               </div>
-              <p><a href="#" class="btn btn-primary reverse py-2 px-4">Read More</a></p>
+              <p><a href="#" class="btn btn-primary reverse py-2 px-4">Batafsil</a></p>
               
             </div>
 
@@ -96,14 +94,14 @@
 
             <div class="block-20 ">
               <figure>
-                <a href="#"><img src="/../template/images/img_1.jpg" alt="" class="img-fluid"></a>
+                <a href="#"><img src="/../template/images/<?=$max_news['img']?>" alt="" class="img-fluid"></a>
               </figure>
               <div class="text">
-                <h3 class="heading"><a href="#"><?php echo $news_block['0']['name'] ?></a></h3>
+                <h3 class="heading"><a href="#"><?=$max_news['name']?></a></h3>
                 <div class="meta">
-                  <div><a href="#"><span class="ion-android-calendar"></span> May 29, 2018</a></div>
-                  <div><a href="#"><span class="ion-android-person"></span> Admin</a></div>
-                  <div><a href="#"><span class="ion-chatbubble"></span> 19</a></div>
+                  <div><a href="#"><span class="ion-android-calendar"></span><?=$max_news['date_added']?></a></div>
+                  <div><a href="#"><span class="ion-android-person"></span> <?=$max_news['author']?></a></div>
+                  <div><a href="#"><span class="ion-chatbubble"></span> <?=$max_news['keyss']?></a></div>
                 </div>
               </div>
             </div>
@@ -113,7 +111,7 @@
             <?php foreach ($news_block as $newss) { ?>
                 <div class="block-21 d-flex mb-4">
               <figure class="mr-3">
-                <a href="#"><img src="/../template/images/img_1.jpg" alt="" class="img-fluid"></a>
+                <a href="#"><img src="/../template/images/ttt.jpg" alt="" class="img-fluid"></a>
               </figure>
               <div class="text">
                 <h3 class="heading"><a href="#"><?php echo $newss['name'] ?></a></h3>
@@ -144,7 +142,7 @@
                         <div class="media-body">
                             <h3 class="heading">Knowledge is power</h3>
                             <p><?php echo $new['name'] ?></p>
-                            <p><a href="#" class="more">Read More <span class="ion-arrow-right-c"></span></a></p>
+                            <p><a href="#" class="more">Batafsil <span class="ion-arrow-right-c"></span></a></p>
                         </div>
                     </div> 
                 </div> 
@@ -160,7 +158,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
-            <figure><img src="/../template/images/img_2_b.jpg" alt="Image placeholder" class="img-fluid"></figure>
+            <figure><img src="/../template/images/for.jpg" alt="Image placeholder" class="img-fluid"></figure>
           </div>
           <div class="col-lg-5 ml-auto">
             <div class="block-15">

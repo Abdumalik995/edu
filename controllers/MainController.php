@@ -18,9 +18,11 @@
 
 			$seos = array();
 			$seos = CONTENT::seo();
-
+			/*news blockdagi malumotlar uchun*/
 			$news_block = array();
 			$news_block = News::getNewsList();
+			/*Eng kup uqilgan malumot uchun*/
+			$max_news = NEWS::countNews();
 			require_once(ROOT.'/views/main/index.php');
 			return true;
 		}
