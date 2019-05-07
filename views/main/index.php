@@ -84,7 +84,7 @@
       <div class="container">
         <div class="row justify-content-center mb-5 element-animate">
           <div class="col-md-7 text-center section-heading">
-            <h2 class="text-primary heading">Yangiliklar</h2>
+            <h2 class="text-primary heading"> So'nggi Yangiliklar</h2>
             
           </div>
         </div>
@@ -109,16 +109,16 @@
           </div>
           <div class="col-md-12 col-lg-6">
             <?php foreach ($news_block as $newss) { ?>
-                <div class="block-21 d-flex mb-5">
+                <div class="block-21 d-flex mb-4">
                     <figure class="mr-3">
-                       <a href="#"><img src="/../template/images/ttt.jpg" alt="" class="img-fluid"></a>
+                       <a href="#"><img src="/../template/images/<?=$newss['img']?>" alt="" class="img-fluid"></a>
                     </figure>
                     <div class="text">
                         <h3 class="heading"><a href="#"><?php echo $newss['name'] ?></a></h3>
                         <div class="meta">
-                            <div><a href="#"><span class="ion-android-calendar"></span> May 29, 2018</a></div>
-                            <div><a href="#"><span class="ion-android-person"></span> Admin</a></div>
-                            <div><a href="#"><span class="ion-chatbubble"></span> 19</a></div>
+                            <div><a href="#"><span class="ion-android-calendar"></span> <?=$newss['date_added']?></a></div>
+                            <div><a href="#"><span class="ion-android-person"></span> <?=ucfirst($newss['author'])?></a></div>
+                            <div><a href="#"><span class="ion-chatbubble"></span> <?=$newss['keyss']?></a></div>
                         </div>
                     </div>
                 </div>

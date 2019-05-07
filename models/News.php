@@ -11,6 +11,8 @@
 				$newsList[$i]['name'] = stripslashes($row['name']);
 				$newsList[$i]['date_added'] = $row['date_added'];			
 				$newsList[$i]['img'] = $row['img'];
+				$newsList[$i]['author'] = $row['author'];
+				$newsList[$i]['keyss'] = $row['keyss'];
 				$i++;
 			}
 			/*echo "<pre>";
