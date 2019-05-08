@@ -28,5 +28,11 @@
 			$max = $result->fetch();
 			return $max;
 		}
+
+		public static function sahifa() {
+			
+			return true;
+
+		}
 	} 
  ?>

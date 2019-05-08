@@ -14,9 +14,9 @@
 			require_once(ROOT.'/views/news/news.php');
 			return true;
 		}
-		public function actionView($categoriya, $id) {
+		public function actionView($id) {
 			echo "<br> sahifani ko`rish";
-			echo "<br>",$categoriya;
+			
 			echo "<br>",$id;
 			return true;
 

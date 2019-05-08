@@ -5,13 +5,13 @@
  ?> 
     <!-- END header -->
 
-    <section class="site-hero site-sm-hero overlay" data-stellar-background-ratio="0.5" style="background-image: url(/../template/images/t5.jfif);">
+    <section class="site-hero site-sm-hero overlay" data-stellar-background-ratio="0.5" style="background-image: url(/../template/images/pex.jpg);">
       <div class="container">
         <div class="row align-items-center justify-content-center site-hero-sm-inner">
           <div class="col-md-7 text-center">
   
             <div class="mb-5 element-animate">
-              <h1 class="mb-2">Our Blog</h1>
+              <h1 class="mb-2 text-dark">Our Blog</h1>
               <p class="bcrumb"><a href="index.html">Home</a> <span class="sep ion-android-arrow-dropright px-2"></span>  <span class="current">Blog</span></p>
             </div>
             
@@ -36,9 +36,9 @@
                     <div class="text">
                       <h3 class="heading"><a href="#"><?=$new['name']?></a></h3>
                       <div class="meta">
-                        <div><a href="#"><span class="ion-android-calendar"></span> May 29, 2018</a></div>
-                        <div><a href="#"><span class="ion-android-person"></span> Admin</a></div>
-                        <div><a href="#"><span class="ion-chatbubble"></span> 19</a></div>
+                        <div><a href="#"><span class="ion-android-calendar"></span> <?=$new['date_added']?></a></div>
+                        <div><a href="#"><span class="ion-android-person"></span> <?=ucfirst($new['author'])?></a></div>
+                        <div><a href="#"><span class="fa fa-eye"></span> <?=$new['keyss']?></a></div>
                       </div>
                     </div>
                   </div>
