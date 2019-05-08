@@ -4,7 +4,7 @@
 		public static function menuAsosiy() {
 			$db = Db::getConnection();
 			$menu = array();
-			$result2 = $db->query("SELECT * FROM menu ORDER BY joylashuv asc");
+			$result2 = $db->query("SELECT * FROM menu where active = 1 ORDER BY joylashuv asc");
 			$i = 0;
 			while($row = $result2->fetch()) {
 				$menu[$row['id']] = [
@@ -27,7 +27,7 @@
 		public static function menuNews() {
 			$db = DB::getConnection();
 			$news = [];
-			$result3 = $db->query("SELECT * FROM content ORDER BY id desc limit 4");
+			$result3 = $db->query("SELECT * FROM content ORDER BY id desc limit 2");
 			$i = 0;
 			while($row3 = $result3->fetch()) {
 				$news[$i]['id'] = $row3['id'];
@@ -40,6 +40,13 @@
 			return $news;
 		}
 
+		public static function welcome() {
+			$db = Db::getConnection();
+			$result = $db ->query("SELECT * FROM content where id = 5");
+			$result->setFetchmode(PDO::FETCH_ASSOC);
+			$about = $result->fetch();
+			return $about;
+		}
 		public static function seo() {
 			$db = DB::getConnection();
 			$seo = [];

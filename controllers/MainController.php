@@ -15,6 +15,8 @@
 			$news = array();
 			$news = Content::menuNews();
 			//print_r($news);
+			/**/
+			$welcome_main = Content::welcome();
 
 			$seos = array();
 			$seos = CONTENT::seo();
