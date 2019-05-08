@@ -42,7 +42,7 @@
 
 		public static function welcome() {
 			$db = Db::getConnection();
-			$result = $db ->query("SELECT * FROM content where id = 5");
+			$result = $db ->query("SELECT * FROM content where id = 2");
 			$result->setFetchmode(PDO::FETCH_ASSOC);
 			$about = $result->fetch();
 			return $about;

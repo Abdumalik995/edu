@@ -63,10 +63,10 @@
 
             <div class="block-15">
               <div class="heading">
-                <h2>Welcome to University</h2>
+                <h2><?=$welcome_main['name']; ?></h2>
               </div>
               <div class="text mb-5">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A quibusdam nisi eos accusantium eligendi velit deleniti nihil ad deserunt rerum incidunt nulla nemo eius molestiae architecto beatae asperiores doloribus animi.</p>
+              <p><?=$welcome_main['anons']; ?></p>
               </div>
               <p><a href="#" class="btn btn-primary reverse py-2 px-4">Batafsil</a></p>
               
