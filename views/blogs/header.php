@@ -1,6 +1,6 @@
 <?php 
-  //include_once(ROOT.'/views/blogs/header.php'); // shunchaki xatolikni tekshirish uchun
   include_once('/controllers/MainController.php'); // shunchaki xatolikni tekshirish uchun
+  //include_once(ROOT.'/views/blogs/header.php'); // shunchaki xatolikni tekshirish uchun
  ?>
 <!doctype html>
 <html lang="en">

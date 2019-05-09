@@ -15,9 +15,11 @@
 			return true;
 		}
 		public function actionView($id) {
-			echo "<br> sahifani ko`rish";
-			
-			echo "<br>",$id;
+			//echo "<br> sahifani ko`rish";
+			$menu_asosiy = array();
+			$menu_asosiy = Content::menuAsosiy();
+			//echo "<br>",$id;
+			require_once(ROOT.'/views/news/aboutnews.php');
 			return true;
 
 		}
