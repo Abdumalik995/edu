@@ -10,9 +10,8 @@
 			echo "<pre>";
 			return true;
 		}
-		public function actionView($categoriya, $id) {
-			echo "<br> sahifani ko`rish";
-			echo "<br>",$categoriya;
+		public function actionView($id) {
+			echo "<br> sahifani ko`rish";			
 			echo "<br>",$id;
 			return true;
 
