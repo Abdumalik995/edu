@@ -1,16 +1,21 @@
 <?php 
 	require_once(ROOT.'/models/News.php');
 	require_once(ROOT.'/models/Content.php');
+	require_once(ROOT.'/components/Pagination.php');
 	class NewsController {
-		public function actionIndex() {
+		public function actionIndex($page = 1) {
 			//echo "<br>Yangiliklar ruyhati";
 			$news = array();
-			$news = News::getNewsList();
+			$news = News::getNewsList($page);
 			$menu_asosiy = array();
 			$menu_asosiy = Content::menuAsosiy();
 			/*echo "<pre>";
 			print_r($news);
 			echo "</pre>";*/
+
+			//sahifalar soniga ulanish
+			$total = News::navbar();
+			$pagination = new Pagination($total, $page, 2, 'page-');
 			require_once(ROOT.'/views/news/news.php');
 			return true;
 		}

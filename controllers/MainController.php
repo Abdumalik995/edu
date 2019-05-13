@@ -19,23 +19,23 @@
 			$welcome_main = Content::welcome();
 
 			$seos = array();
-			$seos = CONTENT::seo();
+			$seos = Content::seo();
 			/*news blockdagi malumotlar uchun*/
 			$news_block = array();
-			$news_block = News::getNewsList();
+			$news_block = News::getNews();
 			/*Eng kup uqilgan malumot uchun*/
-			$max_news = NEWS::countNews();
+			$max_news = News::countNews();
 			require_once(ROOT.'/views/main/index.php');
 			return true;
 		}
 		
-		public function actionView($categoriya, $id) {
+		/*public function actionView($id) {
 			echo "<br> sahifani ko`rish";
-			echo "<br>",$categoriya;
+			
 			echo "<br>",$id;
 			return true;
 
-		}
+		}*/
 		
 	}
 	/*$obj = new News;

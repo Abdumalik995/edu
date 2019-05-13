@@ -49,7 +49,7 @@
             $isDropdown=count($menyu1['sub_menu']) ;?>
             
               <li class="nav-item <?php echo $isDropdown?'dropdown':''?>">
-                <a class="nav-link <?php echo $isDropdown?'dropdown-toggle':''?>" href="courses.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link <?php echo $isDropdown?'dropdown-toggle':''?>" href="" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <?php echo $menyu1['name'] ?>
                     
                   </a> 

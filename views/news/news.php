@@ -31,7 +31,7 @@
                 <div class="col-md-12 col-lg-6 mb-5">
                   <div class="block-20 ">
                     <figure>
-                      <a href="news/<?=$new['id']?>"><img src="/../template/images/<?=$new['img']?>" alt="" class="img-fluid" style="width:290px; height:200px"></a>
+                      <a href="http://news/<?=$new['id']?>"><img src="/../template/images/<?=$new['img']?>" alt="" class="img-fluid" style="width:290px; height:200px"></a>
                     </figure>
                     <div class="text">
                       <h3 class="heading"><a href="news/<?=$new['id']?>"><?=$new['name']?></a></h3>
@@ -51,11 +51,12 @@
               <div class="col-md-12 text-center">
                 <div class="block-27">
                   <ul>
-                    <li><a href="#">&lt;</a></li>
+                    <?php echo $pagination->get(); ?>
+                    <!-- <li><a href="#">&lt;</a></li>
                     <li class="active"><span>1</span></li>
                     <li><a href="#">2</a></li>
                     <li><a href="#">3</a></li>
-                    <li><a href="#">&gt;</a></li>
+                    <li><a href="#">&gt;</a></li> -->
                   </ul>
                 </div>
               </div>
