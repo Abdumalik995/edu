@@ -15,6 +15,8 @@
 		public function run() {
 			// urlni uzlashtirish
 			$uri = $this->getURL();
+
+			/*Session hosil qilib uni boshqarish til tanlash uchun*/
 			if(!isset($_SESSION['lang']) or $uri == 'ru') {
 			 $_SESSION['lang'] = 'ru';
 			} elseif ($uri == 'uz') {
