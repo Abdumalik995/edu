@@ -17,8 +17,8 @@
 	//echo $obyekt->getURL();
 	$obyekt->run();
 	$a = $obyekt->routes;
-	$ob = new Db;
-	$ob->getConnection();
+	/*$ob = new Db;
+	$ob->getConnection();*/
 
 	/*$qator = "web dasturlash";
 	$shablon = "dastur";

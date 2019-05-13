@@ -2,13 +2,15 @@
 	class Content {	
 		//menyuni asosiylarini chiqarish
 		public static function menuAsosiy() {
+			$lang = $_SESSION['lang'];
 			$db = Db::getConnection();
 			$menu = array();
 			$result2 = $db->query("SELECT * FROM menu where active = 1 ORDER BY joylashuv asc");
 			$i = 0;
 			while($row = $result2->fetch()) {
 				$menu[$row['id']] = [
-					'name' => $row['name'],
+					'name' => $row['name_'.$lang],					
+					'adress' => $row['urll'],					
 					'parent_id' => $row['parent_id']
 				];
 				$menu[$row['id']]['sub_menu'] = [];

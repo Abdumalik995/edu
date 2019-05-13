@@ -15,11 +15,11 @@
 		public function run() {
 			// urlni uzlashtirish
 			$uri = $this->getURL();
-			if(!isset($_SESSION['lang']) or $uri = 'ru') {
+			if(!isset($_SESSION['lang']) or $uri == 'ru') {
 			 $_SESSION['lang'] = 'ru';
 			} elseif ($uri == 'uz') {
 			 $_SESSION['lang'] = 'uz';
-			}
+			};
 			 
 			//routesga uzlashtirilgan massiv elementlarini uzgaruvchiga olish
 			foreach($this->routes as $urlShablon => $yul) {

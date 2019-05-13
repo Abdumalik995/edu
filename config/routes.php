@@ -7,6 +7,8 @@
 		'news' => 'news/index',
 		'about' => 'about/list',				
 		'main'=>'main/index',
+		'uz'=>'main/index',
+		'ru'=>'main/index',
 		''=>'main/index'
 		
 	];
