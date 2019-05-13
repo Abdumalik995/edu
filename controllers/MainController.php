@@ -9,6 +9,7 @@
 			$menular = Content::getMenu();*/
 			//echo "<pre>";
 			//>>>print_r($menular);
+			$page = $_SESSION['lang'];
 			$menu_asosiy = array();
 			$menu_asosiy = Content::menuAsosiy();
 			//print_r($menu_asosiy);
