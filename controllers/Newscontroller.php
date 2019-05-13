@@ -12,7 +12,8 @@
 			/*echo "<pre>";
 			print_r($news);
 			echo "</pre>";*/
-
+			$teglar = array();
+			$teglar = News::taglar();
 			//sahifalar soniga ulanish
 			$total = News::navbar();
 			$pagination = new Pagination($total, $page, 2, 'page-');

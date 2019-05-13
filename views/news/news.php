@@ -120,12 +120,14 @@
             <div class="block-26">
               <h3 class="heading">Tags</h3>
               <ul>
-                <li><a href="#">code</a></li>
-                <li><a href="#">design</a></li>
+                <?php foreach($teglar as $teg) { ?>
+                <li><a href="#"><?php echo $teg['tegs']; ?></a></li>
+                <?php } ?>
+                <!-- <li><a href="#">design</a></li>
                 <li><a href="#">typography</a></li>
                 <li><a href="#">development</a></li>
                 <li><a href="#">creative</a></li>
-                <li><a href="#">codehack</a></li>
+                <li><a href="#">codehack</a></li> -->
               </ul>
             </div>
 

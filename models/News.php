@@ -59,6 +59,17 @@
 			$row = $result->fetch();
 			return $row['count'];
 		}
+		public static function taglar() {
+			$db = DB::getConnection();
+			$teg = array();
+			$result = $db->query('SELECT tegs FROM news');
+			$i = 0;
+			while ($row = $result->fetch()) {
+				$teg[$i]['tegs'] = trim($row['tegs']);
+				$i++;
+			}
+			return $teg;
+		}
 
 		public static function sahifa() {
 			
