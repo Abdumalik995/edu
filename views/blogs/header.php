@@ -1,15 +1,28 @@
-<?php 
+<?php
+
+ if (isset($_POST['uz'])) {
+    $_SESSION['lang'] = 'uz';
+    
+  } else {
+    $_SESSION['lang'] = 'ru';
+  } 
   include_once('/controllers/MainController.php'); // shunchaki xatolikni tekshirish uchun
   //include_once(ROOT.'/views/blogs/header.php'); // shunchaki xatolikni tekshirish uchun
+
+  
  ?>
 <!doctype html>
 <html lang="en">
   <head>
-    <title><?php if ($_SESSION['lang'] == 'uz') {
-                    echo WEBNAME;
-                } else {
-                   echo WEBIMYA; 
-                } ?></title>
+    <title>
+      <?php
+        if ($_SESSION['lang'] == 'uz') {
+          echo WEBNAME;
+        } else {
+          echo WEBIMYA; 
+        } ?>
+                  
+    </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -45,7 +58,18 @@
           </button>
 
           <div class="collapse navbar-collapse navbar-light" id="navbarsExample05">
+            <ul class="navbar-nav absolute-left">
+              <li>
+                <form action="ru" method="post" style="float: left;margin-right: 5px">
+                  <button class="btn btn-outline-primary" name="ru">ru</button>                  
+                </form>
+                <form action="uz" method="post" style="float: left;">
+                  <button class="btn btn-outline-primary" name="uz">uz</button>                  
+                </form>
+              </li>
+            </ul>
             <ul class="navbar-nav mx-auto">
+             
              <!--<li class="nav-item">
                 <a class="nav-link active" href="index.html">Asosiy</a>
               </li>
@@ -79,7 +103,7 @@
             </ul>
             <ul class="navbar-nav absolute-right">
               <li>
-                <a href="login.html">Login</a> / <a href="register.html">Register</a>
+                <a href="login.html">Log</a> / <a href="register.html">Reg</a>
               </li>
             </ul>
             

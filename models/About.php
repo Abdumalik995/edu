@@ -9,10 +9,11 @@
 			$i=0;
 
 		while($row = $result->fetch()){
+				$lang = $_SESSION['lang'];
 				$events[$i]['id'] = $row['id'];
-				$events[$i]['name'] = stripslashes($row['name']);
-				$events[$i]['anons'] = stripcslashes($row['anons']);
-				$events[$i]['text'] = stripcslashes($row['text']);
+				$events[$i]['name'] = stripslashes($row['name_'.$lang]);
+				$events[$i]['anons'] = stripcslashes($row['anons_'.$lang]);
+				$events[$i]['text'] = stripcslashes($row['text_'.$lang]);
 				$events[$i]['img'] = stripcslashes($row['img']);
 				$events[$i]['datee'] = $row['datee'];
 				$events[$i]['keyss'] = $row['keyss'];

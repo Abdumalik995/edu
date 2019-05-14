@@ -25,4 +25,5 @@
 	$shablon = "dastur";
 	$result = preg_match("~$shablon~", $qator);
 	var_dump($result);*/
+	
  ?>

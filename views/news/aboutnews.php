@@ -17,7 +17,7 @@
               <div class="col-md-12 col-lg-12 mb-5">
                 <div class="block-20 ">
                   <figure style="padding: 10px;">
-                    <a href=""><img src="/../template/images/<?=$new['img']?>" alt="" class="img-fluid" style="width: 100%; height: 300px;"></a>
+                    <a href=""><img src="/../template/images/<?=$new['img']?>" alt="" class="img-fluid" style="width: 100%; height: 450px;"></a>
                   </figure>
                   <div class="text">
                     <h3 class="heading"><a href=""><?=$new['name']?></a></h3>

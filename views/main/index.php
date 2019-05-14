@@ -292,7 +292,15 @@
     <div class="container site-section element-animate">
       <div class="row justify-content-center mb-5">
           <div class="col-md-7 text-center section-heading">
-            <h2 class="text-primary heading">It sohasi mashxurlari</h2>
+            <h2 class="text-primary heading">
+                <?php 
+                        if ($_SESSION['lang'] == 'uz') {
+                            echo 'It sohasi mashxurlari';
+                        } else {
+                            echo 'Гении IТ индустрии'; 
+                        }
+                    ?>
+            </h2>
             
           </div>
         </div>

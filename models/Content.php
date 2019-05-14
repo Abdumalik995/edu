@@ -96,6 +96,7 @@
 		return $events;
 	}
 		public static function It(){
+			$lang = $_SESSION['lang'];
 			$db = Db::getConnection();
 			$events = array();
 			$result = $db->query("SELECT * FROM it ");
@@ -104,8 +105,8 @@
 			while($row = $result->fetch()){
 			
 			$it[$i]['people'] = stripslashes($row['people']);
-			$it[$i]['work'] = stripcslashes($row['work']);
-			$it[$i]['quote'] = stripcslashes($row['quote']);
+			$it[$i]['work'] = stripcslashes($row['work_'.$lang]);
+			$it[$i]['quote'] = stripcslashes($row['quote_'.$lang]);
 			$it[$i]['img'] = stripcslashes($row['img']);
 			$it[$i]['id'] = $row['id'];
 
