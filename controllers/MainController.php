@@ -21,22 +21,33 @@
 
 			$seos = array();
 			$seos = Content::seo();
+
+			$events=array();
+			$events= Content::Events();
+
+			$it=array();
+			$it = Content::It();
 			/*news blockdagi malumotlar uchun*/
 			$news_block = array();
 			$news_block = News::getNews();
 			/*Eng kup uqilgan malumot uchun*/
 			$max_news = News::countNews();
+
 			require_once(ROOT.'/views/main/index.php');
 			return true;
 		}
 		
-		/*public function actionView($id) {
-			echo "<br> sahifani ko`rish";
-			
-			echo "<br>",$id;
+		public function actionView($string, $id) {
+			//echo "<br> sahifani ko`rish";
+			$menu_asosiy = array();
+			$menu_asosiy = Content::menuAsosiy();
+
+			$welcome_main = Content::welcome($id);
+			//echo "<br>",$id;
+			//require_once(ROOT.'/views/news/aboutnews.php');
 			return true;
 
-		}*/
+		}
 		
 	}
 	/*$obj = new News;

@@ -68,5 +68,47 @@
 			}
 			 return $seo;
 		}
+
+		public static function Events(){
+			$db = Db::getConnection();
+			$events = array();
+			$result = $db->query("SELECT * FROM events ORDER BY datee DESC");
+			$i=0;
+
+		
+			while($row = $result->fetch()){
+				$events[$i]['id'] = $row['id'];
+				$events[$i]['name'] = stripslashes($row['name']);
+				$events[$i]['anons'] = stripcslashes($row['anons']);
+				$events[$i]['text'] = stripcslashes($row['text']);
+				$events[$i]['img'] = stripcslashes($row['img']);
+				$events[$i]['datee'] = $row['datee'];
+
+		
+				$i++;
+
+		}
+		return $events;
+	}
+		public static function It(){
+			$db = Db::getConnection();
+			$events = array();
+			$result = $db->query("SELECT * FROM it ");
+			$i=0;
+
+			while($row = $result->fetch()){
+			
+			$it[$i]['people'] = stripslashes($row['people']);
+			$it[$i]['work'] = stripcslashes($row['work']);
+			$it[$i]['quote'] = stripcslashes($row['quote']);
+			$it[$i]['img'] = stripcslashes($row['img']);
+			$it[$i]['id'] = $row['id'];
+
+		
+			$i++;
+
+			}
+			return $it;
+		}
 	}
  ?>

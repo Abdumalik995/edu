@@ -49,14 +49,14 @@
             $isDropdown=count($menyu1['sub_menu']) ;?>
             
               <li class="nav-item <?php echo $isDropdown?'dropdown':''?>">
-                <a class="nav-link <?php echo $isDropdown?'dropdown-toggle':''?>" href="" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link <?php echo $isDropdown?'dropdown-toggle':''?>" href="<?php echo $menyu1['adress'] ?>" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <?php echo $menyu1['name'] ?>
                     
                   </a> 
                   <?php if($isDropdown) { ?>
                   <div class="dropdown-menu" aria-labelledby="dropdown04">
                     <?php foreach ($menyu1['sub_menu'] as $pastki_menu) { ?>
-                    <a class="dropdown-item" href="courses.html">
+                    <a class="dropdown-item" href="<?php echo $pastki_menu['adress'] ?>">
                       <?= $pastki_menu['name']?></a>
                     <?php } ?>
 

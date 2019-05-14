@@ -13,19 +13,19 @@
           
           <div class="col-md-6 col-lg-8 order-md-2">
             <div class="row">
-              <?php foreach ($newsmore as $new) { ?>
+              <?php foreach ($aboutmore as $about) { ?>
               <div class="col-md-12 col-lg-12 mb-5">
                 <div class="block-20 ">
                   <figure style="padding: 10px;">
-                    <a href=""><img src="/../template/images/<?=$new['img']?>" alt="" class="img-fluid" style="width: 100%; height: 300px;"></a>
+                    <a href=""><img src="/../template/images/<?=$about['img']?>" alt="" class="img-fluid" style="width: 100%; height: 300px;"></a>
                   </figure>
                   <div class="text">
-                    <h3 class="heading"><a href=""><?=$new['name']?></a></h3>
-                    <p><?=$new['text']?></p>
+                    <h3 class="heading"><a href=""><?=$about['name']?></a></h3>
+                    <p><?=$about['text']?></p>
                     <div class="meta">
-                      <div><span class="ion-android-calendar"> <?=$new['date_added']?></span></div>
-                      <div><span class="ion-android-person"> <?=$new['author']?></span></div>
-                      <div><span class="fa fa-eye"> <?=$new['keyss']?></span></div>
+                      <div><span class="ion-android-calendar"> <?=$about['datee']?></span></div>
+                      <!-- <div><span class="ion-android-person"></span></div> -->
+                      <div><span class="fa fa-eye"> <?=$about['keyss']?></span></div>
                     </div>
                   </div>
                 </div>
@@ -93,8 +93,8 @@
 <div class="block-26">
   <h3 class="heading">Tags</h3>
   <ul>
-    <?php foreach ($newsmore as $new){?>
-    <li><a href="#"> <?=$new['tegs']?></a></li>
+    <?php foreach ($aboutmore as $about){?>
+    <li><a href="#"> <?=$about['tegs']?></a></li>
     <?php } ?>
   </ul>
 

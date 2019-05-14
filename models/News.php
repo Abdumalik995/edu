@@ -59,6 +59,7 @@
 			$row = $result->fetch();
 			return $row['count'];
 		}
+
 		public static function taglar() {
 			$db = DB::getConnection();
 			$teg = array();
@@ -71,10 +72,30 @@
 			return $teg;
 		}
 
-		public static function sahifa() {
-			
-			return true;
+		public static function NewsMore($id){
+		 		$id=intval($id);
+		 		//echo $id;
+			$db = Db::getConnection();
+			$newsMore = array();
+			$result = $db->query("SELECT * FROM news WHERE id = $id");
+			$i=0;
+
+		while($row = $result->fetch()){
+			$newsMore[$i]['id'] = $row['id'];
+			$newsMore[$i]['name'] = stripslashes($row['name']);
+			$newsMore[$i]['text'] = stripcslashes($row['text']);
+			$newsMore[$i]['author'] = stripcslashes($row['author']);
+			$newsMore[$i]['tegs'] = stripcslashes($row['tegs']);
+			$newsMore[$i]['img'] = stripcslashes($row['img']);
+			$newsMore[$i]['date_added'] = $row['date_added'];
+		
+			$newsMore[$i]['keyss'] = $row['keyss'];
+		
+			$i++;
 
 		}
+
+		return $newsMore;
+	}
 	} 
  ?>

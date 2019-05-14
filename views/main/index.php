@@ -68,7 +68,7 @@
               <div class="text mb-5">
               <p><?=$welcome_main['anons']; ?></p>
               </div>
-              <p><a href="#" class="btn btn-primary reverse py-2 px-4">Batafsil</a></p>
+              <p><a href="main/view/<?php echo $welcome_main['id']?>" class="btn btn-primary reverse py-2 px-4">Batafsil</a></p>
               
             </div>
 
@@ -94,12 +94,12 @@
 
             <div class="block-20 ">
               <figure>
-                <a href="#"><img src="/../template/images/<?=$max_news['img']?>" alt="" class="img-fluid" style="width:100%;height:440px"></a>
+                <a href="news/view/<?php echo $max_news['id']?>"><img src="/../template/images/<?=$max_news['img']?>" alt="" class="img-fluid" style="width:100%;height:440px"></a>
               </figure>
               <div class="text">
-                <h3 class="heading"><a href="#"><?=$max_news['name']?></a></h3>
+                <h3 class="heading"><a href="news/view/<?php echo $max_news['id']?>"><?=$max_news['name']?></a></h3>
                 <div class="meta">
-                  <div><a href="#"><span class="ion-android-calendar"></span><?=$max_news['date_added']?></a></div>
+                  <div><a href="news/view/<?php echo $max_news['id']?>"><span class="ion-android-calendar"></span><?=$max_news['date_added']?></a></div>
                   <div><a href="#"><span class="ion-android-person"></span> <?=$max_news['author']?></a></div>
                   <div><a href="#"><span class="ion-chatbubble"></span> <?=$max_news['keyss']?></a></div>
                 </div>
@@ -111,7 +111,7 @@
             <?php foreach ($news_block as $newss) { ?>
                 <div class="block-21 d-flex mb-4">
                     <figure class="mr-3">
-                       <a href="#"><img src="/../template/images/<?=$newss['img']?>" alt="" class="img-fluid"></a>
+                       <a href="news/view/<?php echo $newss['id']?>"><img src="/../template/images/<?=$newss['img']?>" alt="" class="img-fluid"></a>
                     </figure>
                     <div class="text">
                         <h3 class="heading"><a href="#"><?php echo $newss['name'] ?></a></h3>
@@ -132,26 +132,7 @@
       </div>
     </div>
     <!-- end section -->
-    <section class="site-section pt-3 element-animate">
-      <div class="container">
-        <div class="row">
-            <?php foreach ($news as $new) { ?>
-                <div class="col-md-6 col-lg-3">
-                    <div class="media block-6 d-block">
-                        <div class="icon mb-3"><span class="flaticon-book"></span></div>
-                        <div class="media-body">
-                            <h3 class="heading">Knowledge is power</h3>
-                            <p><?php echo $new['name'] ?></p>
-                            <p><a href="#" class="more">Batafsil <span class="ion-arrow-right-c"></span></a></p>
-                        </div>
-                    </div> 
-                </div> 
-            <?php } ?>
-          
-          
-        </div>
-      </div>
-    </section>
+    
     <!-- END section -->
 
     <section class="site-section bg-light element-animate" id="section-counter">
@@ -222,255 +203,80 @@
       </div>
     </section>
     <!-- END section -->
-
-    <div class="site-section bg-light">
+  <div class="site-section bg-light">
       <div class="container">
         <div class="row justify-content-center mb-5 element-animate">
           <div class="col-md-7 text-center section-heading">
-            <h2 class="text-primary heading">Popular Courses</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit qui neque sint eveniet tempore sapiente.</p>
-            <p><a href="#" class="btn btn-primary py-2 px-4"><span class="ion-ios-book mr-2"></span>Enroll Now</a></p>
+            <h2 class="text-primary heading">Tadbirlar</h2>
           </div>
         </div>
       </div>
       <div class="container-fluid block-11 element-animate">
         <div class="nonloop-block-11 owl-carousel">
-          <div class="item">
-            <div class="block-19">
-                <figure>
-                  <img src="/../template/images/img_1.jpg" alt="Image" class="img-fluid">
-                </figure>
-                <div class="text">
-                  <h2 class="heading"><a href="#">Advanced JavaScript Learning</a></h2>
-                  <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit qui neque sint eveniet tempore sapiente.</p>
-                  <div class="meta d-flex align-items-center">
-                    <div class="number">
-                      <span>2,219/6,000</span>
-                    </div>
-                    <div class="price text-right"><del class="mr-3">$23</del><span>Free</span></div>
-                  </div>
-                </div>
-              </div>
-          </div>
-
-          <div class="item">
-            <div class="block-19">
-                <figure>
-                  <img src="/../template/images/img_3.jpg" alt="Image" class="img-fluid">
-                </figure>
-                <div class="text">
-                  <h2 class="heading"><a href="#">Advanced JavaScript Learning</a></h2>
-                  <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit qui neque sint eveniet tempore sapiente.</p>
-                  <div class="meta d-flex align-items-center">
-                    <div class="number">
-                      <span>2,219/6,000</span>
-                    </div>
-                    <div class="price text-right"><del class="mr-3">$23</del><span>Free</span></div>
-                  </div>
-                </div>
-              </div>
-          </div>
-
+         
+           <?php foreach ($events as $event){?> 
           <div class="item">
             <div class="block-19">
               <figure>
-                <img src="/../template/images/img_2.jpg" alt="Image" class="img-fluid">
+                <img src="/../template/images/<?=$event['img']?>" alt="Image" class="img-fluid" style="height: 250px">
               </figure>
               <div class="text">
-                <h2 class="heading"><a href="#">Introduction to CSS</a></h2>
-                <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit qui neque sint eveniet tempore sapiente.</p>
+                <h2 class="heading"><a href="about/<?php echo $event['id']?>"><?=$event['name']?></a></h2>
+                <p class="mb-4"><?=$event['anons']?></p>
                 <div class="meta d-flex align-items-center">
                   <div class="number">
-                    <span>1,903/3,000</span>
+                    <span><?=$event['datee']?></span>
                   </div>
-                  <div class="price text-right"><span>$10.99</span></div>
+                  <div class="price text-right"><a href="about/<?php echo $event['id']?>" class="btn btn-primary reverse py-2 px-4">Batafsil</a></div>
                 </div>
               </div>
             </div>
           </div>
-
-          <div class="item">
-            <div class="block-19">
-              <figure>
-                <img src="/../template/images/img_1.jpg" alt="Image" class="img-fluid">
-              </figure>
-              <div class="text">
-                <h2 class="heading"><a href="#">Design &amp; Develop</a></h2>
-                <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit qui neque sint eveniet tempore sapiente.</p>
-                <div class="meta d-flex align-items-center">
-                  <div class="number">
-                    <span>23/100</span>
-                  </div>
-                  <div class="price text-right"><del class="mr-3">$23</del><span>Free</span></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="item">
-            <div class="block-19">
-                <figure>
-                  <img src="/../template/images/img_1.jpg" alt="Image" class="img-fluid">
-                </figure>
-                <div class="text">
-                  <h2 class="heading"><a href="#">Advanced JavaScript Learning</a></h2>
-                  <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit qui neque sint eveniet tempore sapiente.</p>
-                  <div class="meta d-flex align-items-center">
-                    <div class="number">
-                      <span>2,219/6,000</span>
-                    </div>
-                    <div class="price text-right"><del class="mr-3">$23</del><span>Free</span></div>
-                  </div>
-                </div>
-              </div>
-          </div>
-
-          <div class="item">
-            <div class="block-19">
-                <figure>
-                  <img src="/../template/images/img_3.jpg" alt="Image" class="img-fluid">
-                </figure>
-                <div class="text">
-                  <h2 class="heading"><a href="#">Advanced JavaScript Learning</a></h2>
-                  <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit qui neque sint eveniet tempore sapiente.</p>
-                  <div class="meta d-flex align-items-center">
-                    <div class="number">
-                      <span>2,219/6,000</span>
-                    </div>
-                    <div class="price text-right"><del class="mr-3">$23</del><span>Free</span></div>
-                  </div>
-                </div>
-              </div>
-          </div>
-
-          <div class="item">
-            <div class="block-19">
-              <figure>
-                <img src="/../template/images/img_2.jpg" alt="Image" class="img-fluid">
-              </figure>
-              <div class="text">
-                <h2 class="heading"><a href="#">Introduction to CSS</a></h2>
-                <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit qui neque sint eveniet tempore sapiente.</p>
-                <div class="meta d-flex align-items-center">
-                  <div class="number">
-                    <span>1,903/3,000</span>
-                  </div>
-                  <div class="price text-right"><span>$10.99</span></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="item">
-            <div class="block-19">
-              <figure>
-                <img src="/../template/images/img_1.jpg" alt="Image" class="img-fluid">
-              </figure>
-              <div class="text">
-                <h2 class="heading"><a href="#">Design &amp; Develop</a></h2>
-                <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit qui neque sint eveniet tempore sapiente.</p>
-                <div class="meta d-flex align-items-center">
-                  <div class="number">
-                    <span>23/100</span>
-                  </div>
-                  <div class="price text-right"><del class="mr-3">$23</del><span>Free</span></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
+          <?php } ?>
         </div>
       </div>
 
       
     </div>
-    <!-- END section -->
 
 
     <div class="container site-section element-animate">
       <div class="row justify-content-center mb-5">
           <div class="col-md-7 text-center section-heading">
-            <h2 class="text-primary heading">Teachers</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit qui neque sint eveniet tempore sapiente.</p>
+            <h2 class="text-primary heading">It sohasi mashxurlari</h2>
+            
           </div>
         </div>
       <div class="row">
+       <?php foreach ($it as $iti) {?>
         <div class="col-md-6 col-lg-4">
           <div class="block-2">
             <div class="flipper">
-              <div class="front" style="background-image: url(/../template/images/person_3.jpg);">
+              <div class="front" style="background-image: url(/../template/images/<?=$iti['img']?>);">
                 <div class="box">
-                  <h2>Job Smith</h2>
-                  <p>Laravel Expert</p>
+                  <h2><?=$iti['people']?></h2>
+                  <p><?=$iti['work']?></p>
                 </div>
               </div>
               <div class="back">
                 <!-- back content -->
                 <blockquote>
-                  <p>&ldquo;Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.&rdquo;</p>
+                  <p>&ldquo;<?=$iti['quote']?>&rdquo;</p>
                 </blockquote>
                 <div class="author d-flex">
                   <div class="image mr-3 align-self-center">
-                    <img src="/../template/images/person_3.jpg" alt="">
+                    <img src="/../template/images/<?=$iti['img']?>" alt="">
                   </div>
-                  <div class="name align-self-center">Job Smith <span class="position">Laravel Expert</span></div>
+                  <div class="name align-self-center"><?=$iti['people']?> <span class="position"><?=$iti['work']?></span></div>
                 </div>
               </div>
             </div>
           </div> <!-- .flip-container -->
         </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="block-2 ">
-            <div class="flipper">
-              <div class="front" style="background-image: url(/../template/images/person_1.jpg);">
-                <div class="box">
-                  <h2>Mellissa Cruz</h2>
-                  <p>JavaScript Guru</p>
-                </div>
-              </div>
-              <div class="back">
-                <!-- back content -->
-                <blockquote>
-                  <p>&ldquo;Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.&rdquo;</p>
-                </blockquote>
-                <div class="author d-flex">
-                  <div class="image mr-3 align-self-center">
-                    <img src="/../template/images/person_1.jpg" alt="">
-                  </div>
-                  <div class="name align-self-center">Mellissa Cruz <span class="position">JavaScript Guru</span></div>
-                </div>
-              </div>
-            </div>
-          </div> <!-- .flip-container -->
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="block-2">
-            <div class="flipper">
-              <div class="front" style="background-image: url(/../template/images/person_2.jpg);">
-                <div class="box">
-                  <h2>Aldin Powell</h2>
-                  <p>WordPress Ninja</p>
-                </div>
-              </div>
-              <div class="back">
-                <!-- back content -->
-                <blockquote>
-                  <p>&ldquo;Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.&rdquo;</p>
-                </blockquote>
-                <div class="author d-flex">
-                  <div class="image mr-3 align-self-center">
-                    <img src="/../template/images/person_2.jpg" alt="">
-                  </div>
-                  <div class="name align-self-center">Aldin Powell <span class="position">WordPress Ninja</span></div>
-                </div>
-              </div>
-            </div>
-          </div> <!-- .flip-container -->
-        </div>
+        <?php } ?>
       </div>
     </div>
+    <!-- END .block-2 -->
     <!-- END .block-2 -->
 
 

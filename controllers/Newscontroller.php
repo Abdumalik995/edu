@@ -20,10 +20,13 @@
 			require_once(ROOT.'/views/news/news.php');
 			return true;
 		}
-		public function actionView($id) {
+		public function actionView($string, $id) {
 			//echo "<br> sahifani ko`rish";
 			$menu_asosiy = array();
 			$menu_asosiy = Content::menuAsosiy();
+
+			$newsmore = array();
+			$newsmore = News::NewsMore($id);
 			//echo "<br>",$id;
 			require_once(ROOT.'/views/news/aboutnews.php');
 			return true;
