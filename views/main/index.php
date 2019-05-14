@@ -10,31 +10,20 @@
   
             <div class="mb-5 element-animate">
               <div class="block-17">
-                <h2 class="heading text-center mb-4 font-weight-bold"><?php echo WEBNAME ?></h2>
-                <form action="" method="post" class="d-block d-lg-flex mb-4">
+                <h2 class="heading text-center mb-4 font-weight-bold"><?php 
+                if ($_SESSION['lang'] == 'uz') {
+                    echo WEBNAME;
+                } else {
+                   echo WEBIMYA; 
+                }?></h2>
+
+                 
+                <form action="search" method="post" class="d-block d-lg-flex mb-4">
                   <div class="fields d-block d-lg-flex">
-                    <div class="textfield-search one-third"><input type="text" class="form-control" placeholder="Keyword search..."></div>
-                    <div class="select-wrap one-third">
-                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                      <select name="" id="" class="form-control">
-                        <option value="">Category Course</option>
-                        <option value="">Laravel</option>
-                        <option value="">PHP</option>
-                        <option value="">JavaScript</option>
-                        <option value="">Python</option>
-                      </select>
-                    </div>
-                    <div class="select-wrap one-third">
-                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                      <select name="" id="" class="form-control">
-                        <option value="">Difficulty</option>
-                        <option value="">Beginner</option>
-                        <option value="">Intermediate</option>
-                        <option value="">Advance</option>
-                      </select>
-                    </div>
-                  </div>
-                  <input type="submit" class="search-submit btn btn-primary" value="Search">  
+                    <div class="textfield-search one-third">
+                        <input type="text" class="form-control" name="search" placeholder="Keyword search..."></div>
+                    
+                        <input type="submit" name="ser" class="search-submit btn btn-primary position-absolute" value="Search" style="right:0">  
                 </form>                
               </div>
             </div>
@@ -63,12 +52,19 @@
 
             <div class="block-15">
               <div class="heading">
-                <h2><?=$welcome_main['name']; ?></h2>
+                <h2><?=$welcome_main['name_'.$_SESSION['lang']]; ?></h2>
               </div>
               <div class="text mb-5">
-              <p><?=$welcome_main['anons']; ?></p>
+              <p><?=$welcome_main['anons_'.$_SESSION['lang']]; ?></p>
               </div>
-              <p><a href="main/view/<?php echo $welcome_main['id']?>" class="btn btn-primary reverse py-2 px-4">Batafsil</a></p>
+              <p><a href="main/view/<?php echo $welcome_main['id']?>" class="btn btn-primary reverse py-2 px-4">
+              <?php 
+                if ($_SESSION['lang'] == 'uz') {
+                    echo 'Batafsil';
+                } else {
+                   echo 'Узнать больше'; 
+                }
+               ?></a></p>
               
             </div>
 
@@ -84,7 +80,13 @@
       <div class="container">
         <div class="row justify-content-center mb-5 element-animate">
           <div class="col-md-7 text-center section-heading">
-            <h2 class="text-primary heading"> So'nggi Yangiliklar</h2>
+            <h2 class="text-primary heading"> <?php 
+                if ($_SESSION['lang'] == 'uz') {
+                    echo 'So`nggi Yangiliklar';
+                } else {
+                   echo 'Последние новости'; 
+                }
+             ?></h2>
             
           </div>
         </div>
@@ -159,7 +161,14 @@
                   </div>
                   <div class="text">
                     <strong class="number" data-number="<?php echo $seos['0']['short_s'] ?>">0</strong>
-                    <span>Talabalar</span>
+                    <span>
+                    <?php 
+                        if ($_SESSION['lang'] == 'uz') {
+                            echo 'Talabalar';
+                        } else {
+                            echo 'Cтуденты'; 
+                        }
+                     ?></span>
                   </div>
                 </div>
 
@@ -169,7 +178,15 @@
                   </div>
                   <div class="text">
                     <strong class="number" data-number="<?php echo $seos['0']['short_b'] ?>">0</strong>
-                    <span>Universitetlar</span>
+                    <span>
+                    <?php 
+                        if ($_SESSION['lang'] == 'uz') {
+                            echo 'Universitetlar';
+                        } else {
+                            echo 'Университеты'; 
+                        }
+                     ?>
+                    </span>
                   </div>
                 </div>
 
@@ -181,7 +198,15 @@
                   </div>
                   <div class="text">
                     <strong class="number" data-number="<?php echo $seos['0']['short_school'] ?>">0</strong>
-                    <span>Maktablar</span>
+                    <span>
+                    <?php 
+                        if ($_SESSION['lang'] == 'uz') {
+                            echo 'Maktablar';
+                        } else {
+                            echo 'Школы'; 
+                        }
+                     ?>
+                    </span>
                   </div>
                 </div>
 
@@ -191,7 +216,15 @@
                   </div>
                   <div class="text">
                     <strong class="number" data-number="<?php echo $seos['0']['short_teacher'] ?>">0</strong>
-                    <span>O`qituvchilar</span>
+                    <span>
+                    <?php 
+                        if ($_SESSION['lang'] == 'uz') {
+                            echo 'O`qituvchilar';
+                        } else {
+                            echo 'Учителей'; 
+                        }
+                     ?> 
+                    </span>
                   </div>
                 </div>
                 
@@ -207,7 +240,15 @@
       <div class="container">
         <div class="row justify-content-center mb-5 element-animate">
           <div class="col-md-7 text-center section-heading">
-            <h2 class="text-primary heading">Tadbirlar</h2>
+            <h2 class="text-primary heading">
+                <?php 
+                        if ($_SESSION['lang'] == 'uz') {
+                            echo 'Tadbirlar';
+                        } else {
+                            echo 'Событии'; 
+                        }
+                     ?> 
+            </h2>
           </div>
         </div>
       </div>
@@ -227,7 +268,15 @@
                   <div class="number">
                     <span><?=$event['datee']?></span>
                   </div>
-                  <div class="price text-right"><a href="about/<?php echo $event['id']?>" class="btn btn-primary reverse py-2 px-4">Batafsil</a></div>
+                  <div class="price text-right"><a href="about/<?php echo $event['id']?>" class="btn btn-primary reverse py-2 px-4">
+                    <?php 
+                        if ($_SESSION['lang'] == 'uz') {
+                            echo 'Batafsil';
+                        } else {
+                            echo 'Узнать больше'; 
+                        }
+                    ?>
+                  </a></div>
                 </div>
               </div>
             </div>

@@ -1,13 +1,15 @@
 <?php 
+    require_once(ROOT.'/models/Content.php');
 	require_once(ROOT.'/models/Search.php');
 	class SearchController {
 		public function actionIndex() {
+			$menu_asosiy = array();
+			$menu_asosiy = Content::menuAsosiy();
+
+			$searchs = array();
+			$searchs = Search::searchList();
 			
-			$search = array();
-			$search = Search::searchList();
-			echo "<pre>";
-			print_r($news);
-			echo "<pre>";
+			require_once(ROOT.'/views/search/search.php');
 			return true;
 		}
 		public function actionView($id) {

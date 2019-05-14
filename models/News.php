@@ -3,6 +3,7 @@
 		public static function getNewsList($page) {
 			$page = intval($page);
 			$filtr = ($page-1)*2;
+			$lang = $_SESSION['lang'];
 			//echo $filtr;
 			$db = Db::getConnection();
 			$newsList = array();
@@ -11,7 +12,7 @@
 			$i = 0;
 			while($row = $result->fetch()) {
 				$newsList[$i]['id'] = $row['id'];
-				$newsList[$i]['name'] = stripslashes($row['name']);
+				$newsList[$i]['name'] = stripslashes($row['name_'.$lang]);
 				$newsList[$i]['date_added'] = $row['date_added'];			
 				$newsList[$i]['img'] = $row['img'];
 				$newsList[$i]['author'] = $row['author'];
@@ -23,7 +24,7 @@
 			return $newsList;
 		}
 		public static function getNews() {
-			
+			$lang = $_SESSION['lang'];
 			$db = Db::getConnection();
 			$newsList = array();
 			$result = $db->query('SELECT * FROM news ORDER BY date_added DESC LIMIT 4');
@@ -31,7 +32,7 @@
 			$i = 0;
 			while($row = $result->fetch()) {
 				$newsL[$i]['id'] = $row['id'];
-				$newsL[$i]['name'] = stripslashes($row['name']);
+				$newsL[$i]['name'] = stripslashes($row['name_'.$lang]);
 				$newsL[$i]['date_added'] = $row['date_added'];			
 				$newsL[$i]['img'] = $row['img'];
 				$newsL[$i]['author'] = $row['author'];
@@ -45,8 +46,8 @@
 		
 		public static function countNews() {
 			$db = DB::getConnection();
-
-			$result = $db->query("SELECT id, name, img, date_added, author, keyss FROM news where keyss = (SELECT MAX(keyss) FROM news);");
+			$lang = $_SESSION['lang'];
+			$result = $db->query("SELECT id, name_".$lang." as name, img, date_added, author, keyss FROM news where keyss = (SELECT MAX(keyss) FROM news);");
 			$result->setFetchMode(PDO::FETCH_ASSOC);
 			$max = $result->fetch();
 			return $max;
@@ -74,6 +75,7 @@
 
 		public static function NewsMore($id){
 		 		$id=intval($id);
+		 		$lang = $_SESSION['lang'];
 		 		//echo $id;
 			$db = Db::getConnection();
 			$newsMore = array();
@@ -82,8 +84,8 @@
 
 		while($row = $result->fetch()){
 			$newsMore[$i]['id'] = $row['id'];
-			$newsMore[$i]['name'] = stripslashes($row['name']);
-			$newsMore[$i]['text'] = stripcslashes($row['text']);
+			$newsMore[$i]['name'] = stripslashes($row['name_'.$lang]);
+			$newsMore[$i]['text'] = stripcslashes($row['text_'.$lang]);
 			$newsMore[$i]['author'] = stripcslashes($row['author']);
 			$newsMore[$i]['tegs'] = stripcslashes($row['tegs']);
 			$newsMore[$i]['img'] = stripcslashes($row['img']);

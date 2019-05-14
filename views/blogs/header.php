@@ -5,7 +5,11 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title><?php echo WEBNAME ?></title>
+    <title><?php if ($_SESSION['lang'] == 'uz') {
+                    echo WEBNAME;
+                } else {
+                   echo WEBIMYA; 
+                } ?></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -29,7 +33,13 @@
      
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-          <a class="navbar-brand absolute" href="index.html">University</a>
+          <a class="navbar-brand absolute" href="index.html"><?php 
+            if ($_SESSION['lang'] == 'uz') {
+                    echo 'UNIVERSITY';
+                } else {
+                   echo 'УНИВЕРСИТЕТ'; 
+                }
+           ?></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>

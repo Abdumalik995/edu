@@ -6,6 +6,7 @@
 	//2.faylga ulanish
 	define('ROOT', dirname(__FILE__));
 	define('WEBNAME', "TATU ta'lim tizimi");
+	define('WEBIMYA', "TUIT система образования");
 	//echo ROOT;
 	require_once(ROOT.'/components/Router.php');
 	require_once(ROOT.'/components/db.php');

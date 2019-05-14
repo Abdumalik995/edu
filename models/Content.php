@@ -1,4 +1,6 @@
 <?php 
+	$lang = $_SESSION['lang'];
+	global $lang;
 	class Content {	
 		//menyuni asosiylarini chiqarish
 		public static function menuAsosiy() {
@@ -27,15 +29,16 @@
 		}
 
 		public static function menuNews() {
+			$lang = $_SESSION['lang'];
 			$db = DB::getConnection();
 			$news = [];
 			$result3 = $db->query("SELECT * FROM content ORDER BY id desc limit 2");
 			$i = 0;
 			while($row3 = $result3->fetch()) {
 				$news[$i]['id'] = $row3['id'];
-				$news[$i]['name'] = stripslashes($row3['name']);
-				$news[$i]['anons'] = stripslashes($row3['anons']);
-				$news[$i]['text'] = stripslashes($row3['text']);
+				$news[$i]['name'] = stripslashes($row3['name_'.$lang]);
+				$news[$i]['anons'] = stripslashes($row3['anons_'.$lang]);
+				$news[$i]['text'] = stripslashes($row3['text_'.$lang]);
 				$news[$i]['cat_id'] = $row3['cat_id'];
 				$i++;
 			}
@@ -50,26 +53,28 @@
 			return $about;
 		}
 		public static function seo() {
+			$lang = $_SESSION['lang'];
 			$db = DB::getConnection();
 			$seo = [];
 			$result4 = $db->query('SELECT * FROM seo');
 			$i =0;
 			while($row4 = $result4->fetch()) {
 				$seo[$i]['id'] = $row4['id'];	
-				$seo[$i]['name'] = $row4['name'];				
-				$seo[$i]['title'] = $row4['title'];	
+				$seo[$i]['name'] = $row4['name_'.$lang];				
+				$seo[$i]['title'] = $row4['title_'.$lang];	
 				$seo[$i]['img'] = $row4['img'];	
 				$seo[$i]['short_s'] = $row4['short_s'];	
 				$seo[$i]['short_b'] = $row4['short_b'];	
 				$seo[$i]['short_school'] = $row4['short_school'];	
 				$seo[$i]['short_teacher'] = $row4['short-teacher'];	
-				$seo[$i]['site_about'] = $row4['site_about'];	
+				$seo[$i]['site_about'] = $row4['site_about_'.$lang];	
 				$i++;
 			}
 			 return $seo;
 		}
 
 		public static function Events(){
+			$lang = $_SESSION['lang'];
 			$db = Db::getConnection();
 			$events = array();
 			$result = $db->query("SELECT * FROM events ORDER BY datee DESC");
@@ -78,9 +83,9 @@
 		
 			while($row = $result->fetch()){
 				$events[$i]['id'] = $row['id'];
-				$events[$i]['name'] = stripslashes($row['name']);
-				$events[$i]['anons'] = stripcslashes($row['anons']);
-				$events[$i]['text'] = stripcslashes($row['text']);
+				$events[$i]['name'] = stripslashes($row['name_'.$lang]);
+				$events[$i]['anons'] = stripcslashes($row['anons_'.$lang]);
+				$events[$i]['text'] = stripcslashes($row['text_'.$lang]);
 				$events[$i]['img'] = stripcslashes($row['img']);
 				$events[$i]['datee'] = $row['datee'];
 
