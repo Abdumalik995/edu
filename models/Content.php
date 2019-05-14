@@ -1,6 +1,6 @@
 <?php 
 	$lang = $_SESSION['lang'];
-	global $lang;
+	
 	class Content {	
 		//menyuni asosiylarini chiqarish
 		public static function menuAsosiy() {

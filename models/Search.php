@@ -2,6 +2,7 @@
 	if (isset($_REQUEST['search'])) {
 		$search = $_REQUEST['search'];
 		//echo $search;
+		global $search;
 
 	}
 	global $search;
