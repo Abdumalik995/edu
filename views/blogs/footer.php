@@ -1,15 +1,21 @@
-<div class="py-5 block-22">
+<div class="py-5 block-22" style="height: 240px;">
       <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-6 mb-4 mb-md-0 pr-md-5">
-            <h2 class="heading">Create cool websites</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi accusantium optio und.</p>
+        <div class="row ">
+          <div class="col-lg-8 mb-4 mb-md-0 pr-md-5">
+          <h3 class="heading">Contact Information:   </h3>
+            <div class="block-23"style="width: 100%" >
+              <ul style="width: 100%; display: inline-block !important;">
+                <li style="display: inline-block; margin:0; padding-bottom: 15px; margin-left: 5px;color:#fff;"><span style="color:#fff;"  class="icon ion-android-pin"></span><span class="text">203 AMIR TEMUR St. TASHKENT, UZB </span></li>
+                <li style=" margin:0; margin-left: 5px;color:#fff;"><a href="#" style="color:#fff;"><span style="color:#fff;" class="icon ion-ios-telephone"></span><span class="text">+998 71 929 21 10</span><span style="color: #9080A1"></span></a></li>
+                <li style="display: inline-block; margin:0;color:#fff; margin-left: 5px;"><a href="#" style="color:#fff;"><span style="color:#fff;" class="icon ion-android-mail"></span><span class="text">info@yourdomain.com</span></a></li>
+              </ul>
+            </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-lg-4">
             <form action="#" class="subscribe">
               <div class="form-group">
-                <input type="email" class="form-control email" placeholder="Enter email">
-                <input type="submit" class="btn btn-primary submit" value="Subscribe">
+                <input type="email" class="form-control email" placeholder="Email">
+                <input type="submit" class="btn btn-primary submit" value="Jo`natish"style="width: 80px; padding-left: 5px;" >
               </div>
             </form>
           </div>
@@ -17,35 +23,9 @@
       </div>
     </div>
   
-    <footer class="site-footer">
+    <footer class="site-footer" style="height: 100px; padding: 50px">
       <div class="container">
-        <div class="row mb-5">
-          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
-            <h3>University</h3>
-            <p>Perferendis eum illum voluptatibus dolore tempora consequatur minus asperiores temporibus.</p>
-          </div>
-          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
-            <h3 class="heading">Quick Link</h3>
-            <div class="row">
-              <div class="col-md-6">
-                <ul class="list-unstyled">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Courses</a></li>
-                  <li><a href="#">Pages</a></li>
-                </ul>
-              </div>
-              <div class="col-md-6">
-                <ul class="list-unstyled">
-                  <li><a href="#">News</a></li>
-                  <li><a href="#">Support</a></li>
-                  <li><a href="#">Contact</a></li>
-                  <li><a href="#">Privacy</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
+      <!--  <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
             <h3 class="heading">Blog</h3>
             <div class="block-21 d-flex mb-4">
               <div class="text">
@@ -77,20 +57,12 @@
                 </div>
               </div>
             </div>  
-          </div>
-          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
-            <h3 class="heading">Contact Information</h3>
-            <div class="block-23">
-              <ul>
-                <li><span class="icon ion-android-pin"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-                <li><a href="#"><span class="icon ion-ios-telephone"></span><span class="text">+2 392 3929 210</span></a></li>
-                <li><a href="#"><span class="icon ion-android-mail"></span><span class="text">info@yourdomain.com</span></a></li>
-                <li><span class="icon ion-android-time"></span><span class="text">Monday &mdash; Friday 8:00am - 5:00pm</span></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="row pt-5">
+          </div> -->
+        
+
+          
+        
+        <div class="row">
           <div class="col-md-12 text-center copyright">
             
             <p class="float-md-left"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
@@ -122,7 +94,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="/../template/js/jquery.animateNumber.min.js"></script>
     
     <script src="/../template/js/jquery.magnific-popup.min.js"></script>
-
+  <script src="js/google-map.js"></script>  
     <script src="/../template/js/main.js"></script>
   </body>
 </html>

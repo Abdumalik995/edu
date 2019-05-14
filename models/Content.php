@@ -10,7 +10,7 @@
 			while($row = $result2->fetch()) {
 				$menu[$row['id']] = [
 					'name' => $row['name_'.$lang],					
-					'adress' => $row['urll'],					
+					'adress' => $row['urli'],					
 					'parent_id' => $row['parent_id']
 				];
 				$menu[$row['id']]['sub_menu'] = [];
