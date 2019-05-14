@@ -20,6 +20,8 @@
 			require_once(ROOT.'/views/news/news.php');
 			return true;
 		}
+
+		
 		public function actionView($string, $id) {
 			//echo "<br> sahifani ko`rish";
 			$menu_asosiy = array();

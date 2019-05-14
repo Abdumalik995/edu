@@ -74,30 +74,30 @@
 		}
 
 		public static function NewsMore($id){
-		 		$id=intval($id);
-		 		$lang = $_SESSION['lang'];
-		 		//echo $id;
+		 	$id=intval($id);
+		 	$lang = $_SESSION['lang'];
+		 	//echo $id;
 			$db = Db::getConnection();
 			$newsMore = array();
 			$result = $db->query("SELECT * FROM news WHERE id = $id");
 			$i=0;
 
-		while($row = $result->fetch()){
-			$newsMore[$i]['id'] = $row['id'];
-			$newsMore[$i]['name'] = stripslashes($row['name_'.$lang]);
-			$newsMore[$i]['text'] = stripcslashes($row['text_'.$lang]);
-			$newsMore[$i]['author'] = stripcslashes($row['author']);
-			$newsMore[$i]['tegs'] = stripcslashes($row['tegs']);
-			$newsMore[$i]['img'] = stripcslashes($row['img']);
-			$newsMore[$i]['date_added'] = $row['date_added'];
-		
-			$newsMore[$i]['keyss'] = $row['keyss'];
-		
-			$i++;
+			while($row = $result->fetch()){
+				$newsMore[$i]['id'] = $row['id'];
+				$newsMore[$i]['name'] = stripslashes($row['name_'.$lang]);
+				$newsMore[$i]['text'] = stripcslashes($row['text_'.$lang]);
+				$newsMore[$i]['author'] = stripcslashes($row['author']);
+				$newsMore[$i]['tegs'] = stripcslashes($row['tegs']);
+				$newsMore[$i]['img'] = stripcslashes($row['img']);
+				$newsMore[$i]['date_added'] = $row['date_added'];
+			
+				$newsMore[$i]['keyss'] = $row['keyss'];
+			
+				$i++;
 
+			}
+
+			return $newsMore;
 		}
-
-		return $newsMore;
-	}
 	} 
  ?>
