@@ -11,9 +11,10 @@
 		'main/([0-9]+)' => 'main/view/$1',
 		'uz'=>'main/index',
 		'ru'=>'main/index',
-		''=>'main/index',
 		'search'=>'search/index/$1',
-		'user/([a-z]+)' => 'user/index'
+		'user' => 'user/index',
+		''=>'main/index'
+
 		
 	];
  ?>

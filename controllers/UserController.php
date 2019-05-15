@@ -7,8 +7,18 @@
 			$menu_asosiy = Content::menuAsosiy();
 
 			if(isset($_POST['submit'])) {
-				echo $_POST['user'].'<br>';
-				echo $_POST['parol'];
+				//echo $_POST['user'].'<br>';
+				//echo $_POST['parol'];
+				$user = $_POST['user'];
+				$parol = $_POST['parol'];
+
+				//$users = array();
+				$users = User::avtorizatsiya($user, $parol);
+
+				//echo $users;
+				if ($users) {
+					header("Location: ".ROOT."/views/main/index.php");
+				}
 
 			}
 			/*$searchs = array();

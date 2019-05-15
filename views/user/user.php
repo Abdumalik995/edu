@@ -25,7 +25,7 @@
           <div class="col-md-7">
             <div class="form-wrap">
               <h2 class="mb-4">Log in with your account</h2>
-              <form action="user/login" method="post" autocomplete="off">
+              <form action="user" method="post" autocomplete="off">
                 <div class="row">
                   <div class="col-md-12 form-group">
                     <label for="name">Username</label>
