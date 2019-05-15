@@ -25,23 +25,23 @@
           <div class="col-md-7">
             <div class="form-wrap">
               <h2 class="mb-4">Log in with your account</h2>
-              <form action="#" method="post">
+              <form action="user/login" method="post" autocomplete="off">
                 <div class="row">
                   <div class="col-md-12 form-group">
                     <label for="name">Username</label>
-                    <input type="text" id="name" class="form-control py-2">
+                    <input type="text" name="user" id="name" class="form-control py-2">
                   </div>
                 </div>
                 <div class="row mb-5">
                   <div class="col-md-12 form-group">
                     <label for="name">Password</label>
-                    <input type="password" id="name" class="form-control py-2">
+                    <input type="password" id="name" name="parol" class="form-control py-2">
                   </div>
                 </div>
                 
                 <div class="row">
                   <div class="col-md-6 form-group">
-                    <input type="submit" value="Login" class="btn btn-primary px-5 py-2">
+                    <input type="submit" value="Login" name="submit" class="btn btn-primary px-5 py-2">
                   </div>
                 </div>
               </form>

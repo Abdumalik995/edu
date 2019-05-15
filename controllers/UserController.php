@@ -6,6 +6,11 @@
 			$menu_asosiy = array();
 			$menu_asosiy = Content::menuAsosiy();
 
+			if(isset($_POST['submit'])) {
+				echo $_POST['user'].'<br>';
+				echo $_POST['parol'];
+
+			}
 			/*$searchs = array();
 			$searchs = Search::searchList();*/
 			

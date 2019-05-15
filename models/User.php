@@ -1,29 +1,27 @@
 <?php 
 	class User {
-		/*public static function AboutMore($id){
-		 		$id=intval($id);
-		 		//echo $id;
+		public static function avtrizatsiya($user, $parol) {
 			$db = Db::getConnection();
-			$events = array();
-			$result = $db->query("SELECT * FROM events WHERE id = $id");
-			$i=0;
+			$sql = 'SELECT * FROM user WHERE user = :user and parol = :parol';
 
-		while($row = $result->fetch()){
-				$lang = $_SESSION['lang'];
-				$events[$i]['id'] = $row['id'];
-				$events[$i]['name'] = stripslashes($row['name_'.$lang]);
-				$events[$i]['anons'] = stripcslashes($row['anons_'.$lang]);
-				$events[$i]['text'] = stripcslashes($row['text_'.$lang]);
-				$events[$i]['img'] = stripcslashes($row['img']);
-				$events[$i]['datee'] = $row['datee'];
-				$events[$i]['keyss'] = $row['keyss'];
-				$events[$i]['tegs'] = $row['tegs'];
+			//so`rovga obyektni ulaydi
 
-		
-				$i++;
+			$result = $db->prepare($sql);
+			//parametrlarni result o`zgaruvchisiga ulash
 
+			$result->bindParam(':user', $user, PDO::PARAM_STR);
+			$result->bindParam(':parol', $parol, PDO::PARAM_STR);
+			$result->execute();
+			$natija = $result->fetch();
+			if($natija) {
+				return $natija['id'];
+			}
+			return false;
 		}
-		return $events;
-	}*/
+
+		public static function auth($avtorizatsiya) {
+			$_SESSION['user'] = $avtorizatsiya;
+		}
 	}
+	
  ?>
