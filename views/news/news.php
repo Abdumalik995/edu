@@ -2,7 +2,7 @@
     include_once(ROOT.'/views/blogs/header.php');
     //include_once('/../blogs/header.php');
 
- ?> 
+    ?> 
     <!-- END header -->
 
     <section class="site-hero site-sm-hero overlay" data-stellar-background-ratio="0.5" style="background-image: url(/../template/images/pex.jpg);">

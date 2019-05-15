@@ -1,17 +1,16 @@
 <?php 
-	if (isset($_REQUEST['search'])) {
-		$search = $_REQUEST['search'];
-		//echo $search;
-		global $search;
 
-	}
 	global $search;
 	class Search {
 		public static function searchList($search) {
 			$lang = $_SESSION['lang'];
-			global $search;
-			$search = intval($search);
 			
+			if (isset($_REQUEST['search'])) {
+			$search = $_REQUEST['search'];
+			//echo $search;
+			
+
+			}
 			$db = Db::getConnection();
 			$searchs = array();
 			$result = $db->query("SELECT * FROM news WHERE text_".$lang." LIKE '%".$search."%' ORDER BY id DESC");

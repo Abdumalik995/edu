@@ -17,7 +17,7 @@
 	//print_r($_SERVER);
 	//echo $obyekt->getURL();
 	$obyekt->run();
-	$a = $obyekt->routes;
+	
 	/*$ob = new Db;
 	$ob->getConnection();*/
 
@@ -25,5 +25,5 @@
 	$shablon = "dastur";
 	$result = preg_match("~$shablon~", $qator);
 	var_dump($result);*/
-	
+
  ?>

@@ -17,10 +17,10 @@
 			$uri = $this->getURL();
 
 			/*Session hosil qilib uni boshqarish til tanlash uchun*/
-			if(!isset($_SESSION['lang']) or $uri == 'ru') {
-			 $_SESSION['lang'] = 'ru';
-			} elseif ($uri == 'uz') {
+			if(!isset($_SESSION['lang']) or $uri == 'uz') {
 			 $_SESSION['lang'] = 'uz';
+			} elseif ($uri == 'ru') {
+			 $_SESSION['lang'] = 'ru';
 			};
 			 
 			//routesga uzlashtirilgan massiv elementlarini uzgaruvchiga olish

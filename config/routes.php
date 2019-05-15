@@ -12,7 +12,8 @@
 		'uz'=>'main/index',
 		'ru'=>'main/index',
 		''=>'main/index',
-		'search/([a-z]+)'=>'search/index/$1'
+		'search'=>'search/index/$1',
+		'user/([a-z]+)' => 'user/index'
 		
 	];
  ?>

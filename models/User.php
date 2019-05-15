@@ -1,6 +1,6 @@
 <?php 
-	class About {
-		public static function AboutMore($id){
+	class User {
+		/*public static function AboutMore($id){
 		 		$id=intval($id);
 		 		//echo $id;
 			$db = Db::getConnection();
@@ -23,9 +23,7 @@
 				$i++;
 
 		}
-
-		
 		return $events;
-	}
+	}*/
 	}
  ?>

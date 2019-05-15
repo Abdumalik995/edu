@@ -90,12 +90,19 @@
 				$newsMore[$i]['tegs'] = stripcslashes($row['tegs']);
 				$newsMore[$i]['img'] = stripcslashes($row['img']);
 				$newsMore[$i]['date_added'] = $row['date_added'];
-			
-				$newsMore[$i]['keyss'] = $row['keyss'];
-			
+				
+				//$i++;
+				$newsMore[$i]['keyss'] = $row['keyss']+1;
+
 				$i++;
+				
 
 			}
+			$a = $newsMore['0']['keyss'];
+			$b = $newsMore['0']['id'];
+
+			$result1 = $db->query("UPDATE news SET keyss = '$a' WHERE id = '$b'");
+			
 
 			return $newsMore;
 		}
