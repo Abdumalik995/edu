@@ -59,14 +59,19 @@
 
           <div class="collapse navbar-collapse navbar-light" id="navbarsExample05">
             <ul class="navbar-nav absolute-left">
-              <li>
-                <form action="ru" method="post" style="float: left;margin-right: 5px">
+              <li><form action="ru" method="post" style="float: left;margin-right: 5px">
                   <button class="btn btn-outline-primary" name="ru">ru</button>                  
                 </form>
                 <form action="uz" method="post" style="float: left;">
                   <button class="btn btn-outline-primary" name="uz">uz</button>                  
                 </form>
               </li>
+              <!-- <li>
+                <a href="ru">ru</a>
+              </li>
+              <li>
+                <a href="uz">uz</a>
+              </li> -->
             </ul>
             <ul class="navbar-nav mx-auto">
              

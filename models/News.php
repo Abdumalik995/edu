@@ -91,7 +91,7 @@
 				$newsMore[$i]['img'] = stripcslashes($row['img']);
 				$newsMore[$i]['date_added'] = $row['date_added'];
 				
-				//$i++;
+				
 				$newsMore[$i]['keyss'] = $row['keyss']+1;
 
 				$i++;
