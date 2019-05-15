@@ -7,17 +7,17 @@
 			$menu_asosiy = Content::menuAsosiy();
 
 			if(isset($_POST['submit'])) {
-				//echo $_POST['user'].'<br>';
-				//echo $_POST['parol'];
+				
 				$user = $_POST['user'];
 				$parol = $_POST['parol'];
 
-				//$users = array();
+				$user1 = User::tekshirish($user, $parol);
 				$users = User::avtorizatsiya($user, $parol);
-
-				//echo $users;
-				if ($users) {
-					header("Location: ".ROOT."/views/main/index.php");
+				if ($user1 and $users) {
+					header('Location: /');
+				}
+				else {
+					$_SESSION['error'] = 'parol yoki login xato';
 				}
 
 			}
