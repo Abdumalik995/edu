@@ -30,7 +30,7 @@
 			$newsmore = array();
 			$newsmore = News::NewsMore($id);
 			//echo "<br>",$id;
-			require_once(ROOT.'/views/news/aboutnews.php');
+			require_once(ROOT.'/views/news/newsmore.php');
 			return true;
 
 		}
