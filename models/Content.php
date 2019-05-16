@@ -77,7 +77,7 @@
 			$lang = $_SESSION['lang'];
 			$db = Db::getConnection();
 			$events = array();
-			$result = $db->query("SELECT * FROM events ORDER BY datee DESC");
+			$result = $db->query("SELECT * FROM events ORDER BY date_added DESC");
 			$i=0;
 
 		
@@ -87,7 +87,7 @@
 				$events[$i]['anons'] = stripcslashes($row['anons_'.$lang]);
 				$events[$i]['text'] = stripcslashes($row['text_'.$lang]);
 				$events[$i]['img'] = stripcslashes($row['img']);
-				$events[$i]['datee'] = $row['datee'];
+				$events[$i]['datee'] = $row['date_added'];
 
 		
 				$i++;
@@ -124,7 +124,9 @@
 			$lang = $_SESSION['lang'];
 			$db = Db::getConnection();
 			$massiv_key = array();
-			$result = $db->query("SELECT * FROM news WHERE name_".$lang." LIKE '%".$key."%' ORDER BY id DESC");
+			$result = $db->query("SELECT id, name_".$lang.", anons_".$lang.", text_".$lang.", img, keyss, author, date_added  FROM news WHERE name_".$lang." LIKE '%".$key."%'
+				UNION
+				SELECT id, name_".$lang.", anons_".$lang.", text_".$lang.", img, keyss, author, date_added FROM events WHERE name_".$lang." LIKE '%".$key."%' ");
 			$i = 0;
 
 			while ($row = $result->fetch()) {

@@ -15,7 +15,7 @@
 				$events[$i]['anons'] = stripcslashes($row['anons_'.$lang]);
 				$events[$i]['text'] = stripcslashes($row['text_'.$lang]);
 				$events[$i]['img'] = stripcslashes($row['img']);
-				$events[$i]['datee'] = $row['datee'];				
+				$events[$i]['datee'] = $row['date_added'];				
 				$events[$i]['tegs'] = $row['tegs'];
 
 				$events[$i]['keyss'] = $row['keyss']+1;

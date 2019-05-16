@@ -94,7 +94,7 @@
   <h3 class="heading">Tags</h3>
   <ul>
     <?php foreach ($searchs as $search){?>
-    <li><a href="#"> <?=$search['tegs']?></a></li>
+    <li><a href=""> <?=$search['tegs']?></a></li>
     <?php } ?>
   </ul>
 
