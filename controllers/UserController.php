@@ -14,7 +14,7 @@
 				$user1 = User::tekshirish($user, $parol);
 				$users = User::avtorizatsiya($user, $parol);
 				if ($user1 and $users) {
-					header('Location: /');
+					header('Location: cabinet');
 				}
 				else {
 					$_SESSION['error'] = 'parol yoki login xato';

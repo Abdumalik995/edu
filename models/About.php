@@ -15,17 +15,25 @@
 				$events[$i]['anons'] = stripcslashes($row['anons_'.$lang]);
 				$events[$i]['text'] = stripcslashes($row['text_'.$lang]);
 				$events[$i]['img'] = stripcslashes($row['img']);
-				$events[$i]['datee'] = $row['datee'];
-				$events[$i]['keyss'] = $row['keyss'];
+				$events[$i]['datee'] = $row['datee'];				
 				$events[$i]['tegs'] = $row['tegs'];
 
-		
+				$events[$i]['keyss'] = $row['keyss']+1;
 				$i++;
 
-		}
+			}
 
-		
+			$a = $events['0']['keyss'];
+			$b = $events['0']['id'];
+
+			$result1 = $db->query("UPDATE events SET keyss = '$a' WHERE id = '$b'");
+				
+				
 		return $events;
-	}
+			
+			
+		
+		
+		}
 	}
  ?>

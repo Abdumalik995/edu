@@ -21,13 +21,14 @@
                 <form action="search" method="post" class="d-block d-lg-flex mb-4">
                   <div class="fields d-block d-lg-flex">
                     <div class="textfield-search one-third">
-                        <input type="text" class="form-control" name="search" placeholder="Keyword search..."></div>
+                        <input type="text" class="form-control" name="key" placeholder="Keyword search..."></div>
                     
-                        <input type="submit" name="ser" class="search-submit btn btn-primary position-absolute" value="Search" style="right:0">  
-                </form>                
+                        <input type="submit" name="submit" class="search-submit btn btn-primary position-absolute" value="Search" style="right:0">  
+                </form>  
+
               </div>
             </div>
-            
+            <p class="text-center"><a href="user" class="btn py-3 px-5">Avtorizatsiya</a></p>
           </div>
         </div>
       </div>

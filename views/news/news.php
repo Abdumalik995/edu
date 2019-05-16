@@ -11,8 +11,8 @@
           <div class="col-md-7 text-center">
   
             <div class="mb-5 element-animate">
-              <h1 class="mb-2 text-dark">Our Blog</h1>
-              <p class="bcrumb"><a href="index.html">Home</a> <span class="sep ion-android-arrow-dropright px-2"></span>  <span class="current">Blog</span></p>
+              <h1 class="mb-2 text-dark">News Blog</h1>
+              <p class="bcrumb"><a href="/">Home</a> <span class="sep ion-android-arrow-dropright px-2"></span>  <span class="current">News Blog</span></p>
             </div>
             
           </div>

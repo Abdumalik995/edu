@@ -13,8 +13,8 @@
 		'ru'=>'main/index',
 		'search'=>'search/index/$1',
 		'user' => 'user/index',
-		''=>'main/index'
-
-		
+		'cabinet' => 'cabinet/index',
+		'menues' => 'menues/index',
+		''=>'main/index'		
 	];
  ?>

@@ -116,5 +116,30 @@
 			}
 			return $it;
 		}
+
+
+		/*search bulimi uchun*/
+
+		public static function search($key) {
+			$lang = $_SESSION['lang'];
+			$db = Db::getConnection();
+			$massiv_key = array();
+			$result = $db->query("SELECT * FROM news WHERE name_".$lang." LIKE '%".$key."%' ORDER BY id DESC");
+			$i = 0;
+
+			while ($row = $result->fetch()) {
+				$massiv_key[$i]['id'] = $row['id'];
+				$massiv_key[$i]['name'] = $row['name_'.$lang];
+				$massiv_key[$i]['anons'] = $row['anons_'.$lang];
+				$massiv_key[$i]['text'] = $row['text_'.$lang];
+				$massiv_key[$i]['img'] = $row['img'];
+				$massiv_key[$i]['keyss'] = $row['keyss'];
+				$massiv_key[$i]['author'] = $row['author'];
+				$massiv_key[$i]['date_added'] = $row['date_added'];
+				$i++;
+			}
+
+			return $massiv_key;
+		}
 	}
  ?>
