@@ -45,7 +45,7 @@
                     <?php 
                       if(isset($_SESSION['error'])) { ?>
                         <p style="color:red "><?php echo $_SESSION['error'] ?></p>
-                     <?php } ?>
+                     <?php } session_destroy(); ?>
                       
                   </div>
                 </div>
