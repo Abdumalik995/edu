@@ -13,6 +13,9 @@
 		'ru'=>'main/index',		
 		'user/login' => 'user/index',
 		'cabinet' => 'cabinet/index',
+		'cabinet/edit' => 'cabinet/view',
+		'cabinet/news' => 'cabinet/news',
+		
 		'menues' => 'menues/index',
 		''=>'main/index'		
 	];

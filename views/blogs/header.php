@@ -59,10 +59,10 @@
 
           <div class="collapse navbar-collapse navbar-light" id="navbarsExample05">
             <ul class="navbar-nav absolute-left">
-              <li><form action="ru" method="post" style="float: left;margin-right: 5px">
+              <li><form action="/ru" method="post" style="float: left;margin-right: 5px">
                   <button class="btn btn-outline-primary" name="ru">ru</button>                  
                 </form>
-                <form action="uz" method="post" style="float: left;">
+                <form action="/uz" method="post" style="float: left;">
                   <button class="btn btn-outline-primary" name="uz">uz</button>                  
                 </form>
               </li>

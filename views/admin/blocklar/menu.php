@@ -23,17 +23,17 @@
                         <a href="#"><i class="fa fa-desktop "></i>Yangiliklar <span class="fa arrow"></span></a>
                          <ul class="nav nav-second-level">
                             <li>
-                                <a href="news"><i class="fa fa-toggle-on"></i>Yangiliklar ro`yxati</a>
+                                <a href="/cabinet/news"><i class="fa fa-toggle-on"></i>Yangiliklar ro`yxati</a>
                             </li>
                             <li>
-                                <a href="addnews"><i class="fa fa-bell "></i>Qo`shish</a>
+                                <a href="/cabinet/edit"><i class="fa fa-bell "></i>Qo`shish</a>
                             </li>
                                           
                            
                         </ul>
                     </li>
                      <li>
-                        <a href="#"><i class="fa fa-yelp "></i>Extra Pages <span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-yelp "></i>Asosiy malumotlar <span class="fa arrow"></span></a>
                          <ul class="nav nav-second-level">
                             <li>
                                 <a href="invoice.html"><i class="fa fa-coffee"></i>Invoice</a>
@@ -56,31 +56,31 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="table.html"><i class="fa fa-flash "></i>Data Tables </a>
+                        <a href="table"><i class="fa fa-flash "></i>Data Tables </a>
                         
                     </li>
                      <li>
-                        <a href="#"><i class="fa fa-bicycle "></i>Forms <span class="fa arrow"></span></a>
+                        <a href=""><i class="fa fa-bicycle "></i>Forms <span class="fa arrow"></span></a>
                          <ul class="nav nav-second-level">
                            
                              <li>
-                                <a href="form.html"><i class="fa fa-desktop "></i>Basic </a>
+                                <a href="form"><i class="fa fa-desktop "></i>Basic </a>
                             </li>
                              <li>
-                                <a href="form-advance.html"><i class="fa fa-code "></i>Advance</a>
+                                <a href="form-advance"><i class="fa fa-code "></i>Advance</a>
                             </li>
                              
                            
                         </ul>
                     </li>
                       <li>
-                        <a href="gallery.html"><i class="fa fa-anchor "></i>Gallery</a>
+                        <a href="gallery"><i class="fa fa-anchor "></i>Gallery</a>
                     </li>
                      <li>
-                        <a href="error.html"><i class="fa fa-bug "></i>Error Page</a>
+                        <a href="error"><i class="fa fa-bug "></i>Error Page</a>
                     </li>
                     <li>
-                        <a href="login.html"><i class="fa fa-sign-in "></i>Login Page</a>
+                        <a href="user/login"><i class="fa fa-sign-in "></i>Login Page</a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-sitemap "></i>Multilevel Link <span class="fa arrow"></span></a>
