@@ -28,7 +28,7 @@
 
               </div>
             </div>
-            <p class="text-center"><a href="user" class="btn py-3 px-5">Avtorizatsiya</a></p>
+            <p class="text-center"><a href="user/login" class="btn py-3 px-5">Avtorizatsiya</a></p>
           </div>
         </div>
       </div>

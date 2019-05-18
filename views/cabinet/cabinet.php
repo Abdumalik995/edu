@@ -3,7 +3,7 @@
     //include_once('/../blogs/header.php');
 
 ?> 
- <p>Avtorizarsiya bo'ldingiz.</p>
+ <p>Avtorizatsiya bo'ldingiz.</p>
 <?php 
   include_once('/../blogs/footer.php');
 ?>

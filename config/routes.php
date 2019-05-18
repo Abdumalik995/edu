@@ -11,7 +11,7 @@
 		'main/([0-9]+)' => 'main/view/$1',
 		'uz'=>'main/index',
 		'ru'=>'main/index',		
-		'user' => 'user/index',
+		'user/login' => 'user/index',
 		'cabinet' => 'cabinet/index',
 		'menues' => 'menues/index',
 		''=>'main/index'		

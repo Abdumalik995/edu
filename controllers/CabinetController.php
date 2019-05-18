@@ -9,7 +9,7 @@
 			
 			
 			
-			require_once(ROOT.'/views/cabinet/cabinet.php');
+			require_once(ROOT.'/views/admin/index.php');
 			return true;
 		}
 		/*public function actionView($id) {
