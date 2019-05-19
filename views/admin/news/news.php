@@ -29,7 +29,7 @@
                                 <table class="table table-hover">
                                     <thead>
                                         <tr>
-                                            <th>#</th>
+                                            <th>T/r</th>
                                             <th>Nomi</th>   
                                             <th>Muallif</th>
                                             <th>Sana</th>
@@ -43,7 +43,7 @@
                                         
                                             <?php foreach ($news as $new) { ?>
                                                 <tr>
-                                                <td><?=$new['id'] ?></td>
+                                                <td><? echo $i; $i++ ?></td>
                                                 <td><?=$new['name'] ?></td>
                                                 <td><?=$new['author'] ?></td>
                                                 <td><?=$new['date_added'] ?></td>

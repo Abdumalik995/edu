@@ -12,10 +12,11 @@
 		'uz'=>'main/index',
 		'ru'=>'main/index',		
 		'user/login' => 'user/index',
-		'cabinet' => 'cabinet/index',
+		//'cabinet/news/([a-z]+)' => 'cabinet/news_edit',		
+		'cabinet/edit/([a-z]+)' => 'cabinet/news_edit',		
 		'cabinet/edit' => 'cabinet/view',
 		'cabinet/news' => 'cabinet/news',
-		
+		'cabinet' => 'cabinet/index',
 		'menues' => 'menues/index',
 		''=>'main/index'		
 	];

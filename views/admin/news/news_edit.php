@@ -3,6 +3,7 @@
         <!-- /. NAV TOP  -->
 <?php include(ROOT.'/views/admin/blocklar/menu.php'); ?>   
         <!-- /. NAV SIDE  -->
+
         <div id="page-wrapper">
             <div id="page-inner">
                 <div class="row">
@@ -21,29 +22,29 @@
                            BASIC FORM
                         </div>
                         <div class="panel-body">
-                            <form role="form">
+                            <form role="form" action="/cabinet/edit/insert" method="POST">
                                 <div class="form-group">
                                             <label>Kerakli tilni tanlang</label>
-                                            <select class="form-control">
-                                                <option>O'zbek</option>
-                                                <option>Rus</option>
+                                            <select class="form-control" name="lang">
+                                                <option value="uz">O'zbek</option>
+                                                <option value="ru">Rus</option>
                                                 
                                             </select>
                                         </div>
                                         <div class="form-group">
                                             <label>Nomi</label>
-                                            <input class="form-control" type="text">
+                                            <input name="ism" class="form-control" type="text">
                                                       </div>
 
                                             <div class="form-group">
                                             <label>Anons</label>
 
-                                            <textarea class="form-control" rows="3"></textarea>
+                                            <textarea name="anons" class="form-control" rows="3"></textarea>
                                         </div>
                                          <div class="form-group">
                                             <label>To'liq matn</label>
 
-                                            <textarea class="form-control" rows="3"></textarea>
+                                            <textarea name="text" class="form-control" rows="3"></textarea>
                                         </div>
                                         <div class="form-group">
                         <label class="control-label col-lg-4">Image Upload</label>
@@ -51,7 +52,7 @@
                             <div class="fileupload fileupload-new" data-provides="fileupload">
                                 <div class="fileupload-preview thumbnail" style="width: 200px; height: 150px;"></div>
                                 <div>
-                                    <span class="btn btn-file btn-success"><span class="fileupload-new">Select image</span><span class="fileupload-exists">Change</span><input type="file"></span>
+                                    <span class="btn btn-file btn-success"><span class="fileupload-new">Select image</span><span class="fileupload-exists">Change</span><input name="img" type="file"></span>
                                     <a href="#" class="btn btn-danger fileupload-exists" data-dismiss="fileupload">Remove</a>
                                 </div>
                             </div>
@@ -59,16 +60,16 @@
                     </div>
                                          <div class="form-group">                                   
                                             <label>Muallif</label>
-                                            <input class="form-control" type="text">
+                                            <input name="author" class="form-control" type="text">
                                                                      </div>
                                                                      <div class="form-group">
                                     
                                             <label>Vaqt</label>
-                                            <input class="form-control" type="date">
+                                            <input name="vaqt" class="form-control" type="date">
                                                                      </div>
                                   
                                  
-                                        <button type="submit" class="btn btn-info">Send Message </button>
+                                        <button type="submit" name="submit" class="btn btn-info">Send Message </button>
 
                                     </form>
                             </div>
