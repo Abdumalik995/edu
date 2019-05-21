@@ -4,8 +4,11 @@ require_once(ROOT.'/models/About.php');
 	class AboutController {
 		public function actionView($string, $id) {
 			//echo "<br> sahifani ko`rish";
-			$menu_asosiy = array();
-			$menu_asosiy = Content::menuAsosiy();
+			$menu = array();
+			$menu = Content::getMenu();
+
+			$dropdown1 = array();
+			$dropdown1  = Content::DropdownMenu();
 
 			$aboutmore = array();
 			$aboutmore = About::AboutMore($id);

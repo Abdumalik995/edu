@@ -3,8 +3,11 @@
 	require_once(ROOT.'/models/User.php');
 	class UserController {
 		public function actionIndex() {
-			$menu_asosiy = array();
-			$menu_asosiy = Content::menuAsosiy();
+			$menu = array();
+			$menu = Content::getMenu();
+
+			$dropdown1 = array();
+			$dropdown1  = Content::DropdownMenu();
 
 			if(isset($_POST['submit'])) {
 				

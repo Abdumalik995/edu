@@ -105,7 +105,7 @@
             </ul>
             <ul  class="navbar-nav ">
               <li>
-                <a href="user"><?php if($lang=='ru') echo "Вход"; else echo "Kirish"; ?></a> / <a href="user"><?php if($lang=='ru') echo "Регистрация"; else echo "Registratsiya"; ?></a>
+                <a href="/user/login"><?php if($lang=='ru') echo "Вход"; else echo "Kirish"; ?></a> / <a href="/user"><?php if($lang=='ru') echo "Регистрация"; else echo "Registratsiya"; ?></a>
               </li>
             </ul>
             

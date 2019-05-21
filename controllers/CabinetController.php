@@ -4,9 +4,11 @@
 	require_once(ROOT.'/models/Cabinet.php');
 	class CabinetController {
 		public function actionIndex() {
-			$menu_asosiy = array();
-			$menu_asosiy = Content::menuAsosiy();
+			$menu = array();
+			$menu = Content::getMenu();
 
+			$dropdown1 = array();
+			$dropdown1  = Content::DropdownMenu();
 			
 			
 			

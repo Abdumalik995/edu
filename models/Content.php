@@ -40,7 +40,7 @@
 			$lang = $_SESSION['lang'];
 			$db = DB::getConnection();
 			$news = [];
-			$result3 = $db->query("SELECT * FROM content ORDER BY id desc limit 2");
+			$result3 = $db->query("SELECT * FROM cantent ORDER BY id desc limit 2");
 			$i = 0;
 			while($row3 = $result3->fetch()) {
 				$news[$i]['id'] = $row3['id'];
@@ -55,7 +55,7 @@
 
 		public static function welcome() {
 			$db = Db::getConnection();
-			$result = $db ->query("SELECT * FROM content where id = 2");
+			$result = $db ->query("SELECT * FROM cantent where id = 2");
 			$result->setFetchmode(PDO::FETCH_ASSOC);
 			$about = $result->fetch();
 			return $about;

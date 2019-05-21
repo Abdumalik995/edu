@@ -3,8 +3,11 @@
 	require_once(ROOT.'/models/News.php');
 	class MenuesController {
 		public function actionIndex() {
-			$menu_asosiy = array();
-			$menu_asosiy = Content::menuAsosiy();
+			$menu = array();
+			$menu = Content::getMenu();
+
+			$dropdown1 = array();
+			$dropdown1  = Content::DropdownMenu();
 
 			if (isset($_POST['submit'])) {
 				$key = $_POST['key'];
