@@ -5,25 +5,19 @@
 			$id=intval($id);
 			$db=Db::getConnection();
 			$info=array();
-			$result=$db->query("SELECT * FROM content WHERE dropdown_id=$id");			
-			$i = 0;
-			while($row = $result->fetch()) {
-				$row['name'] = $row['name_'.$lang];
-				$row['anons'] = $row['anons_'.$lang];
-				$row['text'] = $row['text_'.$lang];			
-				$i++;
-			}
-			
-			/*if(($row['name_'.$lang]=='Me`yoriy hujjatlar') || ($row['name_'.$lang]=='rus')){
-				$row1['list'] = explode('/', $row['text_'.$lang]);
-				$row1['name'] = $row['name_'.$lang];
+			$result=$db->query("SELECT * FROM content WHERE dropdown_id=$id");
+			$result->setFetchMode(PDO::FETCH_ASSOC);
+			$row = $result->fetch();
+			if($row['name']=='Me`yoriy hujjatlar'){
+				$row1['list'] = explode('/', $row['text']);
+				$row1['name'] = $row['name'];
 				
 				return $row1;
 			}
-			else{*/
+			else{
 
 			return $row;
-			//}
+			}
 		}
 	}
 

@@ -142,7 +142,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
-            <figure><img src="/../template/images/for.jpg" alt="Image placeholder" class="img-fluid"></figure>
+            <figure><img src="/../template/images/as.jpg" alt="Image placeholder" class="img-fluid"></figure>
           </div>
           <div class="col-lg-5 ml-auto">
             <div class="block-15">
