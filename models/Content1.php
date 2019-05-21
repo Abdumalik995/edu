@@ -8,6 +8,8 @@
 			$result=$db->query("SELECT * FROM content WHERE dropdown_id=$id");
 			$result->setFetchMode(PDO::FETCH_ASSOC);
 			$row = $result->fetch();
+
+			
 			if($row['name']=='Me`yoriy hujjatlar'){
 				$row1['list'] = explode('/', $row['text']);
 				$row1['name'] = $row['name'];

@@ -5,14 +5,16 @@
 	class NewsController {
 		public function actionIndex($page = 1) {
 			//echo "<br>Yangiliklar ruyhati";
-			$news = array();
-			$news = News::getNewsList($page);
-			
 			$menu = array();
 			$menu = Content::getMenu();
 
 			$dropdown1 = array();
 			$dropdown1  = Content::DropdownMenu();
+			
+			$news = array();
+			$news = News::getNewsList($page);
+
+			
 			/*echo "<pre>";
 			print_r($news);
 			echo "</pre>";*/
@@ -28,8 +30,11 @@
 		
 		public function actionView($string, $id) {
 			//echo "<br> sahifani ko`rish";
-			$menu_asosiy = array();
-			$menu_asosiy = Content::menuAsosiy();
+			$menu = array();
+			$menu = Content::getMenu();
+
+			$dropdown1 = array();
+			$dropdown1  = Content::DropdownMenu();
 
 			$newsmore = array();
 			$newsmore = News::NewsMore($id);

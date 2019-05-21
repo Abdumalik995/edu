@@ -48,7 +48,7 @@
      
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-          <a class="navbar-brand absolute" href="http://edu.lc"><?php if($lang=='ru') echo "УНИВЕРСИТЕТ"; else echo "UNIVERSITET"; ?></a>
+          <a class="navbar-brand absolute" href="http://edu"><?php if($lang=='ru') echo "УНИВЕРСИТЕТ"; else echo "UNIVERSITET"; ?></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -105,13 +105,21 @@
             </ul>
             <ul  class="navbar-nav ">
               <li>
-                <a href="/user/login"><?php if($lang=='ru') echo "Вход"; else echo "Kirish"; ?></a> / <a href="/user"><?php if($lang=='ru') echo "Регистрация"; else echo "Registratsiya"; ?></a>
+                <a href="/user/login"><?php if($lang=='ru') echo "Вход"; else echo "Kirish "; ?></a> / <a href="/user"><?php if($lang=='ru') echo "Регистрация"; else echo "Registratsiya "; ?></a>
               </li>
             </ul>
             
           </div>
-          <a href="uz" style="margin-left: 15px;">uz</a><span>/</span>
-          <a href="ru">ru</a>
+          &nbsp;
+           <form action="/uz" method="post" style="float: left;">
+                  <button class="btn btn-outline-primary rounded-circle" name="uz">uz</button>                  
+                </form> 
+                &nbsp;
+          <form action="/ru" method="post" style="float: left;margin-right: 5px">
+                  <button class="btn btn-outline-primary rounded-circle" name="ru">ru</button>                  
+                </form>
+               
+         
         </div>
       </nav>
     </header>

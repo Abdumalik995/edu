@@ -12,7 +12,7 @@
 		'main'=>'main/index',
 		'([a-z]+)/uz'=>'main/index',
 		'uz'=>'main/index',
-		'([a-z]+)/ru'=>'main/index',
+		'([a-z]+)/ru '=>'main/index',
 		'ru'=>'main/index',		
 		'user/login' => 'user/index',
 		'user' => 'user/index',
