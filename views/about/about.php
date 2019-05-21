@@ -38,57 +38,35 @@
           <!-- END content -->
           <div class="col-md-6 col-lg-4 order-md-1">
 
-            <div class="block-24 mb-5">
-              <h3 class="heading">Sahifalar</h3>
-              <ul>
-                <li><a href="#">Laravel <span>10</span></a></li>
-                <li><a href="#">PHP <span>43</span></a></li>
-                <li><a href="#">JavaScript <span>21</span></a></li>
-                <li><a href="#">Python <span>65</span></a></li>
-                <li><a href="#">iOS <span>34</span></a></li>
-                <li><a href="#">Android <span>45</span></a></li>
-                <li><a href="#">Swift <span>22</span></a></li>
-              </ul>
-            </div>
-
-            <div class="block-25 mb-5">
-              <div class="heading">Recent Courses</div>
-              <ul>
-                <li>
-                  <a href="#" class="d-flex">
-                    <figure class="image mr-3">
-                      <img src="/../template/images/img_2_b.jpg" alt="" class="img-fluid">
-                    </figure>
-                    <div class="text">
-                      <h3 class="heading">Create cool websites using this template</h3>
-                      <span class="meta">$34</span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="d-flex">
-                    <figure class="image mr-3">
-                      <img src="/../template/images/img_2_b.jpg" alt="" class="img-fluid">
-                    </figure>
-                    <div class="text">
-                      <h3 class="heading">Create cool websites using this template</h3>
-                      <span class="meta">$34</span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="d-flex">
-                    <figure class="image mr-3">
-                      <img src="/../template/images/img_2_b.jpg" alt="" class="img-fluid">
-                    </figure>
-                    <div class="text">
-                      <h3 class="heading">Create cool websites using this template</h3>
-                      <span class="meta">$34</span>
-                    </div>
-                  </a>
-                </li>
-              </ul>
-            </div>
+           <?php
+              if ($_SESSION['lang'] == 'uz') { ?>
+                  <div class="block-24 mb-5">
+                    <h3 class="heading">Tezkor sahifalar</h3>
+                    <ul>
+                      <li><a href="#"><i class="fa fa-graduation-cap"></i>  Fakultetlar</a></li>
+                      <li><a href="#"><i class="fa fa-"></i>  Kafedralar</a></li>
+                      <li><a href="#"><i class="fa fa-"></i>  Markaz va bo`limlar</a></li>
+                      <li><a href="#"><i class="fa fa-"></i>  Filiallar</a></li>
+                      <li><a href="#"><i class="fas fa-user-graduate"></i>Talabalarga</a></li>
+                      <li><a href="#"><i class="fa fa-"></i>  Abiturentlarga</a></li>
+                      <li><a href="#"><i class="fa fa-picture-o"></i>  Fotogalereya</a></li>
+                    </ul>
+                </div>
+              <?php } else { ?>
+                      <div class="block-24 mb-5">
+                        <h3 class="heading"></h3>
+                        <ul>
+                          <li><a href="#"><i class="fa fa-graduation-cap"></i>  Факультеты</a></li>
+                          <li><a href="#"><i class="fa fa-"></i>  отдел</a></li>
+                          <li><a href="#"><i class="fa fa-"></i>  центры </a></li>
+                          <li><a href="#"><i class="fa fa-"></i>  филиалы</a></li>
+                          <li><a href="#"><i class="fas fa-user-graduate">Студентам</i></a></li>
+                          <li><a href="#"><i class="fa fa-"></i>  Абитурентам</a></li>
+                          <li><a href="#"><i class="fa fa-picture-o"></i>  Фотогалерея</a></li>
+                        </ul>
+                      </div>
+               
+             <?php } ?>
 
 <div class="block-26">
   <h3 class="heading">Tags</h3>
