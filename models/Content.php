@@ -3,29 +3,37 @@
 	
 	class Content {	
 		//menyuni asosiylarini chiqarish
-		public static function menuAsosiy() {
+		public static function getMenu(){
 			$lang = $_SESSION['lang'];
-			$db = Db::getConnection();
-			$menu = array();
-			$result2 = $db->query("SELECT * FROM menu where active = 1 ORDER BY joylashuv asc");
-			$i = 0;
-			while($row = $result2->fetch()) {
-				$menu[$row['id']] = [
-					'name' => $row['name_'.$lang],					
-					'adress' => $row['urli'],					
-					'parent_id' => $row['parent_id']
-				];
-				$menu[$row['id']]['sub_menu'] = [];
-				
-			}
 
-			foreach($menu as $key => $value) {
-				if($value['parent_id']) {
-					$menu[$value['parent_id']]['sub_menu'][] = $value;
-					unset($menu[$key]);
-				}
-			}
-			return $menu;
+			$db= Db::getConnection();
+			$navigatsiya = array();
+			$result1 = $db->query("SELECT * FROM navigatsiya");
+			$i=0;
+		while($row = $result1->fetch()){
+			$navigatsiya[$i]['id'] = $row['id'];
+			$navigatsiya[$i]['name'] = stripslashes($row['name_'.$lang]);
+			$navigatsiya[$i]['url'] = $row['url'];
+			$i++;
+
+		}
+		 return $navigatsiya;
+
+		}
+		public static function DropdownMenu(){
+			$lang = $_SESSION['lang'];
+			$db= Db::getConnection();
+			$dropdown = array();
+			$result1 = $db->query("SELECT * FROM dropdown");
+			$i=0;
+		while($row = $result1->fetch()){
+			$dropdown[$i]['id'] = $row['id'];
+			$dropdown[$i]['name'] = stripslashes($row['name_'.$lang]);
+			$dropdown[$i]['nav_id'] = $row['nav_id'];
+			$i++;
+
+		}
+		 return $dropdown;
 		}
 
 		public static function menuNews() {

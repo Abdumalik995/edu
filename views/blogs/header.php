@@ -6,6 +6,8 @@
   } else {
     $_SESSION['lang'] = 'ru';
   } 
+
+  $lang = $_SESSION['lang'];
   include_once('/controllers/MainController.php'); // shunchaki xatolikni tekshirish uchun
   //include_once(ROOT.'/views/blogs/header.php'); // shunchaki xatolikni tekshirish uchun
 
@@ -42,77 +44,74 @@
   </head>
   <body>
     
-    <header role="banner">
+     <header role="banner">
      
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-          <a class="navbar-brand absolute" href="index.html"><?php 
-            if ($_SESSION['lang'] == 'uz') {
-                    echo 'UNIVERSITY';
-                } else {
-                   echo 'УНИВЕРСИТЕТ'; 
-                }
-           ?></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+          <a class="navbar-brand absolute" href="http://edu.lc"><?php if($lang=='ru') echo "УНИВЕРСИТЕТ"; else echo "UNIVERSITET"; ?></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
 
           <div class="collapse navbar-collapse navbar-light" id="navbarsExample05">
-            <ul class="navbar-nav absolute-left">
-              <li><form action="/ru" method="post" style="float: left;margin-right: 5px">
-                  <button class="btn btn-outline-primary" name="ru">ru</button>                  
-                </form>
-                <form action="/uz" method="post" style="float: left;">
-                  <button class="btn btn-outline-primary" name="uz">uz</button>                  
-                </form>
-              </li>
-              <!-- <li>
-                <a href="ru">ru</a>
-              </li>
-              <li>
-                <a href="uz">uz</a>
-              </li> -->
-            </ul>
             <ul class="navbar-nav mx-auto">
-             
-             <!--<li class="nav-item">
-                <a class="nav-link active" href="index.html">Asosiy</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="blog.html">Yangiliklar</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">Muallif haqida</a>
-              </li> -->
-           <?php foreach ($menu_asosiy as $menyu1) {
-            $isDropdown=count($menyu1['sub_menu']) ;?>
-            
-              <li class="nav-item <?php echo $isDropdown?'dropdown':''?>">
-                <a class="nav-link <?php echo $isDropdown?'dropdown-toggle':''?>" href="<?=$menyu1['adress'] ?>" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <?php echo $menyu1['name'] ?>
-                    
-                  </a> 
-                  <?php if($isDropdown) { ?>
-                  <div class="dropdown-menu" aria-labelledby="dropdown04">
-                    <?php foreach ($menyu1['sub_menu'] as $pastki_menu) { ?>
-                    <a class="dropdown-item" href="<?=$pastki_menu['adress'] ?>">
-                      <?= $pastki_menu['name']?></a>
-                    <?php } ?>
 
-                  </div>
-                <?php } ?>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="<?=$menu['0']['url']?>" id="dropdown04" aria-haspopup="true" aria-expanded="false"><?php echo $menu['0']['name'] ?></a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  <?php foreach ($dropdown1 as $minmenu) {if($minmenu['nav_id']==$menu['0']['id']){ ?>
+                    <a class="dropdown-item" href="http:/content/<?=$minmenu['id']?>"><?php echo $minmenu['name'] ?></a>
+                  <?php }} ?>
+                </div>
+
               </li>
-            <?php } ?>
-                <li><a href="http://edu/news">Log</a></li>
-             
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="<?=$menu['1']['url']?>" id="dropdown04"  aria-haspopup="true" aria-expanded="false"><?php echo $menu['1']['name']; ?></a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+
+                  <?php foreach ($dropdown1 as $minmenu) {if($minmenu['nav_id']==$menu['1']['id']){ ?>
+                    <a class="dropdown-item" href="http:/fakultet/<?=$minmenu['id']?>"><?php echo $minmenu['name'] ?></a>
+                  <?php }} ?>
+
+                </div>
+
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="<?=$menu['2']['url']?>" id="dropdown04" aria-haspopup="true" aria-expanded="false"><?php echo $menu['2']['name']; ?></a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  <?php foreach ($dropdown1 as $minmenu) {if($minmenu['nav_id']==$menu['2']['id']){ ?>
+                    <a class="dropdown-item" href=""><?php echo $minmenu['name'] ?></a>
+                  <?php }} ?>
+                </div>
+
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="<?=$menu['3']['url']?>" id="dropdown05"  aria-haspopup="true" aria-expanded="false"><?php echo $menu['3']['name']; ?></a>
+                <div class="dropdown-menu" aria-labelledby="dropdown05">
+                  <?php foreach ($dropdown1 as $minmenu) {if($minmenu['nav_id']==$menu['3']['id']){ ?>
+                    <a class="dropdown-item" href=""><?php echo $minmenu['name'] ?></a>
+                  <?php }} ?>
+
+                </div>
+
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="<?=$menu['4']['url']?>"><?php echo $menu['4']['name']; ?></a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="<?=$menu['5']['url']?>"><?php echo $menu['5']['name']; ?></a>
+              </li>
             </ul>
-            <ul class="navbar-nav absolute-right">
+            <ul  class="navbar-nav ">
               <li>
-                <a href="login.html">Log</a> / <a href="register.html">Reg</a>
+                <a href="user"><?php if($lang=='ru') echo "Вход"; else echo "Kirish"; ?></a> / <a href="user"><?php if($lang=='ru') echo "Регистрация"; else echo "Registratsiya"; ?></a>
               </li>
             </ul>
             
           </div>
+          <a href="uz" style="margin-left: 15px;">uz</a><span>/</span>
+          <a href="ru">ru</a>
         </div>
       </nav>
     </header>

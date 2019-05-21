@@ -10,8 +10,11 @@
 			//echo "<pre>";
 			//>>>print_r($menular);
 			//$page = $_SESSION['lang'];
-			$menu_asosiy = array();
-			$menu_asosiy = Content::menuAsosiy();
+			$menu = array();
+			$menu = Content::getMenu();
+
+			$dropdown1 = array();
+			$dropdown1  = Content::DropdownMenu();
 			//print_r($menu_asosiy);
 			$news = array();
 			$news = Content::menuNews();
