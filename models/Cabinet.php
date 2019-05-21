@@ -21,25 +21,34 @@
 			return $newsL;
 		}
 
-		public static function insertNews($name, $anons, $text, $img, $author, $date_added) {
+		public static function insertNews($name_uz, $name_ru, $anons_uz, $anons_ru, $text_uz, $text_ru, $img, $author, $date_added) {
 			//$lang = $_SESSION['lang'];
 			$db = Db::getConnection();
 			//$newsList = array();
-			$result = $db->query("INSERT INTO `news` (`name_uz`, `anons_uz`, `text_uz`, `img', 'author`, `date_added`) VALUES ('$name', $anons, '$text', '$img', '$author', '$date_added'");
-
-			/*$i = 0;
-			while($row = $result->fetch()) {
-				$newsL[$i]['id'] = $row['id'];
-				$newsL[$i]['name'] = stripslashes($row['name_'.$lang]);
-				$newsL[$i]['date_added'] = $row['date_added'];			
-				$newsL[$i]['img'] = $row['img'];
-				$newsL[$i]['author'] = $row['author'];
-				$newsL[$i]['keyss'] = $row['keyss'];
-				$i++;
-			}
-			/*echo "<pre>";
-			print_r($newsL);*/
-			return $result;
+			$result = $db->query("INSERT INTO `news` (`name_uz`, `name_ru`, `anons_uz`, `anons_ru`, `text_uz`, `text_ru`, `img`, `author`, `date_added`) VALUES ('$name_uz', '$name_ru', '$anons_uz', '$anons_ru', '$text_uz', '$text_ru', '$img', '$author', '$date_added')");			
+		
+			return true;
 		}
+
+		public static function newsEdit($id) {
+			$id = intval($id);			
+			$db = Db::getConnection();			
+			$result=$db->query("SELECT * FROM news WHERE id=$id");
+			$result->setFetchMode(PDO::FETCH_ASSOC);
+			$row = $result->fetch();
+
+			return $row;
+		}
+		public static function newsDelete($id) {
+			$id = intval($id);			
+			$db = Db::getConnection();			
+			$result=$db->query("DELETE FROM news WHERE id=$id");
+			$result->setFetchMode(PDO::FETCH_ASSOC);
+			$row = $result->fetch();
+
+			return $row;
+		}
+
+		
 	}
  ?>

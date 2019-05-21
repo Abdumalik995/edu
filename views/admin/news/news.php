@@ -23,7 +23,7 @@
                            Yangiliklar ro'yxati
 
                         </div>
-                       <a href="/cabinet/news/views"> <button type="button" class="btn btn-success" ac><i class="glyphicon glyphicon-plus"></i>Qo`shish</button></a>
+                       <a href="/cabinet/insert"> <button type="button" class="btn btn-success" ac><i class="glyphicon glyphicon-plus"></i>Qo`shish</button></a>
                         <div class="panel-body">
                        <div class="table-responsive">
                                 <table class="table table-hover">
@@ -43,14 +43,15 @@
                                         
                                             <?php foreach ($news as $new) { ?>
                                                 <tr>
-                                                <td><? echo $i; $i++ ?></td>
-                                                <td><?=$new['name'] ?></td>
-                                                <td><?=$new['author'] ?></td>
-                                                <td><?=$new['date_added'] ?></td>
-                                                 <td> <a href="cabinet/edit/<?=$new['id']?>" class="btn btn-primary"><i class="glyphicon glyphicon-search"></i>Edit</a>
-                                    </td>
-                                    <td><button class="btn btn-danger"><i class="glyphicon glyphicon-home"></i>Delete</button></td>
-                                        </tr>
+                                                    <td><? echo $i; $i++ ?></td>
+                                                    <td><?=$new['name'] ?></td>
+                                                    <td><?=$new['author'] ?></td>
+                                                    <td><?=$new['date_added'] ?></td>
+                                                     <td> <a href="/cabinet/edit/<?=$new['id']?>" class="btn btn-primary"><i class="glyphicon glyphicon-search"></i>Edit</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/cabinet/delete/<?=$new['id']?>" class="btn btn-danger"><i class="glyphicon glyphicon-home"></i>Delete</a></td>
+                                                </tr>
                                                 
                                            <?php } ?>
                                             

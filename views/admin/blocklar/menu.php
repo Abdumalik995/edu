@@ -26,7 +26,7 @@
                                 <a href="/cabinet/news"><i class="fa fa-toggle-on"></i>Yangiliklar ro`yxati</a>
                             </li>
                             <li>
-                                <a href="/cabinet/edit"><i class="fa fa-bell "></i>Qo`shish</a>
+                                <a href="/cabinet/insert"><i class="fa fa-bell "></i>Qo`shish</a>
                             </li>
                                           
                            

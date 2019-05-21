@@ -23,29 +23,78 @@
 			return true;
 
 		}
+		/*=Newsni qayta yozish funksiyasi===*/
+		public function actionEdit($id) {
+			$edit = array();
+			$edit = Cabinet::newsEdit($id);
+			
+			require_once(ROOT.'/views/admin/news/news_edit1.php');
+			return true;
 
+		}
+		/*==News delete funksiyasi==*/
+		public function actionDelete($id) {
+			
+			$deleted = Cabinet::newsDelete($id);
+			$i = 1;
+			$news = array();
+			$news = Cabinet::getnews();
+			require_once(ROOT.'/views/admin/news/news.php');
+			return true;
+			
+
+		}
 		public function actionView() {
 
 			require_once(ROOT.'/views/admin/news/news_edit.php');
 			return true;
 
 		}
+		public function actionCabinet() {
 
-		public function actionNews_edit() {
+			require_once(ROOT.'/views/admin/news/news_edit.php');
+			return true;
 
-			if (isset($_POST['submit'])) {
+		}
 
-				$lang = $_POST['lang'];
-				$name = $_POST['ism'];
-				$anons = $_POST['anons'];
-				$text = $_POST['text'];
-				$img = $_POST['img'];
-				$author = $_POST['author'];
+		public function actionNews_insert() {
+
+			if (isset($_POST['submit'])) {	
+
+				function test_input($data) {
+      				$data = trim($data);
+      				$data = stripslashes($data);
+      				$data = htmlspecialchars($data);
+      				return $data;
+    			}			
+				//$categoriya = $_POST['categoriya'];
+				$name_uz = test_input($_POST['name_uz']);
+				$name_ru = test_input($_POST['name_ru']);
+				$anons_uz = test_input($_POST['anons_uz']);
+				$anons_ru = test_input($_POST['anons_ru']);
+				$text_uz = test_input($_POST['text_uz']);
+				$text_ru = test_input($_POST['text_ru']);
+				
+				$author = test_input($_POST['author']);
 				$date_added = $_POST['vaqt'];
 				
-				$kalit = Cabinet::insertNews($name, $anons, $text, $img, $author, $date_added);
+				 if(isset($_FILES['img']) and ($_FILES['img']['error'] == 0)) { 					
+ 					$img = $_FILES['img']['name']; 					
+ 					$papka = ROOT."/template/images/".$img; 					
+ 					$kesh = $_FILES['img']['tmp_name']; 					
+ 					move_uploaded_file($kesh, $papka);
+ 	
+ 					//agar fayl yuklangan bulsa
+ 					
+ 				}
+				
+
+				$kalit = Cabinet::insertNews($name_uz, $name_ru, $anons_uz, $anons_ru, $text_uz, $text_ru, $img, $author, $date_added);
 				if ($kalit) {
-					echo "nnn";
+					$i = 1;
+					$news = array();
+					$news = Cabinet::getnews();
+					require_once(ROOT.'/views/admin/news/news.php');
 				} else {
 					echo "yo'q";
 				}

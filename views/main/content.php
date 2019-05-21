@@ -59,18 +59,35 @@
               </ul>
             </div>
 
-             <div class="block-24 mb-5">
-              <h3 class="heading">Tezkor sahifalar</h3>
-              <ul>
-                <li><a href="#"><i class="fa fa-graduation-cap"></i>  Fakultetlar</a></li>
-                <li><a href="#"><i class="fa fa-"></i>  Kafedralar</a></li>
-                <li><a href="#"><i class="fa fa-"></i>  Markaz va bo`limlar</a></li>
-                <li><a href="#"><i class="fa fa-"></i>  Filiallar</a></li>
-                <li><a href="#"><i class="fas fa-user-graduate"></i>Talabalarga</a></li>
-                <li><a href="#"><i class="fa fa-"></i>  Abiturentlarga</a></li>
-                <li><a href="#"><i class="fa fa-picture-o"></i>  Fotogalereya</a></li>
-              </ul>
-            </div>
+             <?php
+              if ($_SESSION['lang'] == 'uz') { ?>
+                  <div class="block-24 mb-5">
+                    <h3 class="heading">Tezkor sahifalar</h3>
+                    <ul>
+                      <li><a href="#"><i class="fa fa-graduation-cap"></i>  Fakultetlar</a></li>
+                      <li><a href="#"><i class="fa fa-"></i>  Kafedralar</a></li>
+                      <li><a href="#"><i class="fa fa-"></i>  Markaz va bo`limlar</a></li>
+                      <li><a href="#"><i class="fa fa-"></i>  Filiallar</a></li>
+                      <li><a href="#"><i class="fas fa-user-graduate"></i>Talabalarga</a></li>
+                      <li><a href="#"><i class="fa fa-"></i>  Abiturentlarga</a></li>
+                      <li><a href="#"><i class="fa fa-picture-o"></i>  Fotogalereya</a></li>
+                    </ul>
+                </div>
+              <?php } else { ?>
+                      <div class="block-24 mb-5">
+                        <h3 class="heading"></h3>
+                        <ul>
+                          <li><a href="#"><i class="fa fa-graduation-cap"></i>  Факультеты</a></li>
+                          <li><a href="#"><i class="fa fa-"></i>  отдел</a></li>
+                          <li><a href="#"><i class="fa fa-"></i>  центры </a></li>
+                          <li><a href="#"><i class="fa fa-"></i>  филиалы</a></li>
+                          <li><a href="#"><i class="fas fa-user-graduate">Студентам</i></a></li>
+                          <li><a href="#"><i class="fa fa-"></i>  Абитурентам</a></li>
+                          <li><a href="#"><i class="fa fa-picture-o"></i>  Фотогалерея</a></li>
+                        </ul>
+                      </div>
+               
+             <?php } ?>
 
 
 

@@ -45,7 +45,7 @@
                   <hr style="border: 0.5px solid black; width: 520px; float: right; margin-right: 5px;">
                 <div class="block-20" style="height: 260px;">
                   <div class="col-lg-4 col-md-4" style="float: left; padding-top: 10px;padding-right: 0; padding-left: 25px;">
-                    <img src="" alt="Rasm" class="img-fluid" style="width: 200px; height: 225px; padding-right: 0; margin-left: 10px;">
+                    <img src="" alt="" class="img-fluid" style="width: 200px; height: 225px; padding-right: 0; margin-left: 10px;">
                   </div>
                   <div class="text col-lg-8 col-md-8"  style="float: right;">
                     <h3 class="heading"><?=$fakultet['dekan']?></h3>
@@ -53,13 +53,13 @@
                     <p style="margin: 0">Dushanba va Chorshanba kunlari: 13:00 - 16:00</p>
                     
                     <p>Telefon:(8 371) 238-64-08</p>
-                    <p>E-mail:<a href="">b.akbaraliev@tuit.uz</a></p>
+                    <p>E-mail:<a href="">abdumalik.botirov.95@mail.ru</a></p>
 
                   </div>
                 </div>
                 <div class="block-20" style="height: 260px; margin-top: 20px;">
                   <div class="col-lg-4 col-md-4" style="float: left; padding-top: 10px;padding-right: 0; padding-left: 25px;">
-                    <img src="" alt="Rasm" class="img-fluid" style="width: 200px; height: 225px; padding-right: 0; margin-left: 10px;">
+                    <img src="" alt="" class="img-fluid" style="width: 200px; height: 225px; padding-right: 0; margin-left: 10px;">
                   </div>
                   <div class="text col-lg-8 col-md-8"  style="float: right;">
                     <h3 class="heading"><?=$fakultet['zam_dekan']?></h3>
@@ -67,7 +67,7 @@
                     <p style="margin: 0">Dushanba va Chorshanba kunlari: 13:00 - 16:00</p>
                     
                     <p>Telefon:(8 371) 238-64-08</p>
-                    <p>E-mail:<a href="">b.akbaraliev@tuit.uz</a></p>
+                    <p>E-mail:<a href="">abdumalik.botirov.95@mail.ru</a></p>
 
                   </div>
                 </div>
@@ -90,18 +90,7 @@
               </ul>
             </div>
 
-             <div class="block-24 mb-5">
-              <h3 class="heading">Tezkor sahifalar</h3>
-              <ul>
-                <li><a href="#"><i class="fa fa-graduation-cap"></i>  Fakultetlar</a></li>
-                <li><a href="#"><i class="fa fa-"></i>  Kafedralar</a></li>
-                <li><a href="#"><i class="fa fa-"></i>  Markaz va bo`limlar</a></li>
-                <li><a href="#"><i class="fa fa-"></i>  Filiallar</a></li>
-                <li><a href="#"><i class="fas fa-user-graduate"></i>Talabalarga</a></li>
-                <li><a href="#"><i class="fa fa-"></i>  Abiturentlarga</a></li>
-                <li><a href="#"><i class="fa fa-picture-o"></i>  Fotogalereya</a></li>
-              </ul>
-            </div>
+             
 
 
 
