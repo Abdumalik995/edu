@@ -31,10 +31,10 @@
                 <div class="col-md-12 col-lg-6 mb-5">
                   <div class="block-20 ">
                     <figure>
-                      <a href="news/view/<?php echo $new['id']?>"><img src="/../template/images/<?=$new['img']?>" alt="" class="img-fluid" style="width:290px; height:200px"></a>
+                      <a href="/news/view/<?php echo $new['id']?>"><img src="/../template/images/<?=$new['img']?>" alt="" class="img-fluid" style="width:290px; height:200px"></a>
                     </figure>
                     <div class="text">
-                      <h3 class="heading"><a href="news/view/<?=$new['id']?>"><?=$new['name']?></a></h3>
+                      <h3 class="heading"><a href="/news/view/<?=$new['id']?>"><?=$new['name']?></a></h3>
                       <div class="meta">
                         <div><a href="#"><span class="ion-android-calendar"></span> <?=$new['date_added']?></a></div>
                         <div><a href="#"><span class="ion-android-person"></span> <?=ucfirst($new['author'])?></a></div>

@@ -58,7 +58,7 @@
               <div class="text mb-5">
               <p><?=$welcome_main['anons_'.$_SESSION['lang']]; ?></p>
               </div>
-              <p><a href="main/view/<?php echo $welcome_main['id']?>" class="btn btn-primary reverse py-2 px-4">
+              <p><a href="/content/<?php echo $welcome_main['id']?>" class="btn btn-primary reverse py-2 px-4">
               <?php 
                 if ($_SESSION['lang'] == 'uz') {
                     echo 'Batafsil';
