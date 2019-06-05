@@ -39,6 +39,8 @@
 
 			return $row;
 		}
+
+		
 		public static function newsDelete($id) {
 			$id = intval($id);			
 			$db = Db::getConnection();			
